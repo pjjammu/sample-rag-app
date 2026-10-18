@@ -1,0 +1,220 @@
+id,type,question,reference_answer,model_answer,cited_pages,expected_pages,auto_or_judge_verdict,judge_reason,my_verdict
+G01,lookup,How many players can each team have on the field?,"Up to eleven players per team, one of whom must be the goalkeeper.","Each team can have a maximum of **eleven players** on the field, with one of them being the goalkeeper [p. 59].
+
+However, a match may not start or continue if either team has fewer than **seven players** [p. 59].",59,59,CORRECT,"The answer states a maximum of eleven players per team, one of whom must be the goalkeeper, matching the reference, and the extra point about the seven-player minimum is correct under the Laws.",CORRECT
+G02,paraphrase,Can a game start if one side only has six people?,No. A match may not start or continue if either team has fewer than seven players.,"No, a game cannot start if one side only has six people. [p. 59]
+
+According to the Laws, ""A match may not start or continue if either team has fewer than seven players."" A minimum of seven players per team is required for the match to begin. [p. 59]",59,"59, 107",CORRECT,"The model answer says no and quotes the rule that a match may not start or continue if either team has fewer than seven players, which matches the reference.",CORRECT
+G03,lookup,How long does a standard match last?,Two equal halves of 45 minutes (reducible only by prior agreement and in line with competition rules).,"A standard match lasts for two equal halves of 45 minutes each [p. 93].
+
+However, this duration may be reduced if agreed between the referee and the two teams before the start of the match and if in accordance with competition rules [p. 93].",93,93,CORRECT,"The model answer states two equal 45-minute halves and notes reduction only by prior agreement in line with competition rules, matching the reference.",CORRECT
+G04,lookup,What is the maximum length of the half-time interval?,Not exceeding 15 minutes.,The maximum length of the half-time interval is 15 minutes [p. 93].,93,"93, 103, 199",CORRECT,"The model answer states the maximum half-time interval is 15 minutes, which matches the reference 'not exceeding 15 minutes'.",CORRECT
+G05,lookup,What circumference must the ball have?,Between 68 cm and 70 cm.,The ball must have a circumference of between 68 cm (27 ins) and 70 cm (28 ins) [p. 55].,55,55,CORRECT,"The model answer states the circumference must be between 68 cm and 70 cm, matching the reference exactly; the inch conversions are accurate.",CORRECT
+G06,lookup,How much must the ball weigh at the start of the match?,Between 410 g and 450 g.,The ball must weigh between 410 g (14 oz) and 450 g (16 oz) at the start of the match. [p. 55],55,55,CORRECT,"The model answer states the same 410 g to 450 g range as the reference, and the added ounce equivalents (14 oz and 16 oz) are consistent with it.",CORRECT
+G07,paraphrase,How big is the goal?,Posts are 7.32 m apart (inside) and the lower edge of the crossbar is 2.44 m above the ground.,"The goal dimensions are [p. 50]:
+
+- **Width (inside of posts):** 7.32 m (8 yards)
+- **Height (lower edge of crossbar to ground):** 2.44 m (8 feet)
+
+The goalposts and crossbar must also not exceed 12 cm (5 inches) in width and depth [p. 50].",50,50,CORRECT,"The answer gives 7.32 m between the inside of the posts and 2.44 m from the ground to the lower edge of the crossbar, matching the reference; the extra detail about the 12 cm maximum post and crossbar width is correct and does not contradict it.",CORRECT
+G08,lookup,How far from the midpoint between the goalposts is the penalty mark?,11 m (12 yds).,The penalty mark is 11 m (12 yds) from the midpoint between the goalposts. [p. 48],48,48,CORRECT,"The model answer states 11 m (12 yds), matching the reference exactly.",CORRECT
+G09,lookup,How far must opponents be from the ball at a kick-off?,At least 9.15 m (10 yds) until the ball is in play.,"At a kick-off, opponents of the team taking the kick-off must be at least 9.15 m (10 yds) from the ball until it is in play. [p. 97]",97,97,CORRECT,"The model answer states the 9.15 m (10 yds) distance and that it applies until the ball is in play, matching the reference.",CORRECT
+G10,lookup,What is the maximum number of substitutes in an official competition?,"Up to five, as determined by FIFA, the confederation or the national association.","The maximum number of substitutes in an official competition is **five** [p. 59]. 
+
+However, this applies specifically to men's and women's competitions involving 1st teams of clubs in the top division or senior 'A' international teams where competition rules permit a maximum of five substitutes. When using five substitutes, each team has a maximum of three substitution opportunities, plus they may additionally make substitutions at half-time [p. 59].
+
+For all other matches in official competitions, a greater number of substitutes may be used if the teams agree on a maximum number and the referee is informed before the match. If the referee is not informed or no agreement is reached, each team is allowed a maximum of six substitutes [p. 60].","59, 60","20, 59",UNPARSEABLE,,
+G11,lookup,How long can a goalkeeper control the ball with their hands before a corner kick is awarded?,More than eight seconds; a corner kick is awarded to the opponents.,"A goalkeeper can control the ball with their hands for a maximum of **eight seconds** before a corner kick is awarded. [p. 119]
+
+If the goalkeeper controls the ball with their hand(s)/arm(s) for more than eight seconds before releasing it, a corner kick is awarded to the opposing team. [p. 119, 149] The referee will visually count down the last five seconds with a raised hand. [p. 119]","119, 149","11, 119, 149, 184",CORRECT,"The answer gives eight seconds as the limit, says a corner kick goes to the opponents after more than eight seconds, and adds the correct detail about the referee's five-second countdown.",CORRECT
+G12,lookup,What happens if a throw-in goes directly into the opponents' goal?,No goal; a goal kick is awarded.,"If a throw-in goes directly into the opponents' goal, a goal kick is awarded [p. 141].",141,141,CORRECT,"The model answer states that a goal kick is awarded, which matches the reference; no goal is implied by the goal kick award.",CORRECT
+G13,lookup,Where must the ball be placed for a corner kick?,In the corner area nearest to where the ball crossed the goal line (or to the goalkeeper's position when penalised).,The ball must be placed in the corner area nearest to the point where the ball passed over the goal line or the goalkeeper's position when penalised [p. 149].,149,149,CORRECT,"The model answer matches the reference: the ball is placed in the corner area nearest to where it crossed the goal line, or nearest to the goalkeeper's position when penalised.",CORRECT
+G14,lookup,Where must opponents be at a goal kick until the ball is in play?,Outside the penalty area until the ball is in play.,Opponents must be **outside the penalty area** until the ball is in play at a goal kick. [p. 145],145,145,CORRECT,"The model answer states opponents must be outside the penalty area until the ball is in play, matching the reference.",CORRECT
+G15,lookup,When is the ball out of play?,"When it has wholly passed over the goal line or touchline on the ground or in the air, or play has been stopped by the referee (plus other listed cases).","The ball is out of play when: [p. 101]
+
+• it has wholly passed over the goal line or touchline on the ground or in the air
+• play has been stopped by the referee
+• it touches a match official, remains on the field of play and:
+  - a team starts a promising attack, or
+  - the ball goes directly into the goal, or
+  - the team in possession of the ball changes
+
+In all these cases, play is restarted with a dropped ball. [p. 101]",101,101,UNPARSEABLE,,
+G16,lookup,When is a goal scored?,"When the whole ball passes over the goal line, between the goalposts and under the crossbar, with no offence by the scoring team.","A goal is scored when the whole of the ball passes over the goal line, between the goalposts and under the crossbar, provided that no offence has been committed by the team scoring the goal [p. 103].
+
+Additionally, a goal may be scored directly from a goal kick, but only against the opposing team [p. 145].","103, 145",103,CORRECT,"The answer states the whole ball over the line, between the posts and under the crossbar, with no offence by the scoring team; the extra goal-kick detail is accurate and does not contradict the reference.",CORRECT
+G17,paraphrase,What gear do players have to wear?,"Shirt with sleeves, shorts, socks, shinguards and footwear.","According to the Laws, compulsory equipment for players comprises the following separate items [p. 67]:
+
+• a shirt with sleeves
+• shorts
+• socks
+• shinguards (must be made of suitable material, of appropriate size to provide reasonable protection, and covered by socks)
+• footwear
+
+Additionally, non-dangerous protective equipment is permitted, such as gloves, headgear, facemasks, knee and arm protectors made of soft, lightweight padded material, sports spectacles, and (for goalkeepers) caps and tracksuit bottoms [p. 68].
+
+The team captain must also wear an armband issued or authorised by the competition organiser, or a single-coloured armband with the word 'captain' or the letter 'C' [p. 67].","67, 68",67,UNPARSEABLE,,
+G18,lookup,What methods can be used to decide the winner of a drawn match?,"Away goals rule, two equal periods of extra time of up to 15 minutes each, and penalties (shoot-out), alone or combined.","According to the Laws of the Game, when competition rules require a winning team after a drawn match or home-and-away tie, the only permitted procedures to determine the winning team are [p. 103]:
+
+• **away goals rule**
+• **two equal periods of extra time not exceeding 15 minutes each**
+• **penalties (penalty shoot-out)**
+
+A combination of these procedures may be used [p. 103].",103,103,CORRECT,"The answer lists all three methods (away goals, two equal extra-time periods of up to 15 minutes each, penalty shoot-out) and notes they can be combined, matching the reference.",CORRECT
+G19,lookup,Where must the goalkeeper stand when a penalty kick is taken?,"On the goal line, between the posts, facing the kicker until the ball is kicked.","When a penalty kick is taken, the defending goalkeeper must:
+
+- Remain on the goal line, facing the kicker, between the goalposts, until the ball is kicked [p. 135]
+- Have at least part of one foot touching, in line with, or behind, the goal line [p. 135]
+
+The goalkeeper must also not behave in a way that unfairly distracts the kicker, such as delaying the taking of the kick or touching the goalposts, crossbar or goal net [p. 135].",135,135,CORRECT,"The answer states the goalkeeper must stay on the goal line between the posts, facing the kicker until the ball is kicked, and the added detail about foot position and not distracting the kicker is consistent with the Laws.",CORRECT
+G20,lookup,Which kinds of decisions can the VAR assist the referee with?,"Five categories: goal/no goal, penalty/no penalty, red card, mistaken identity, plus the wrongly awarded corner-kick category.","According to the Laws of the Game, the VAR may assist the referee with the following decisions [p. 77, 176]:
+
+• **Goal/no goal**
+• **Penalty/no penalty**
+• **Direct red card** (not including a clearly incorrect second caution) [p. 176]
+• **Mistaken identity** when the referee cautions or sends off the wrong player of the offending team [p. 176]
+• **Clearly incorrectly awarded corner kick** if the decision can be changed immediately and without delaying the restart (this is a competition option) [p. 77, 176]
+
+In all cases, the VAR may only intervene for a ""clear and obvious error"" or ""serious missed incident"" [p. 77]. Additionally, there are restrictions on when reviews can occur: if play has stopped and been restarted, the referee may only undertake a review for mistaken identity or potential sending-off offences relating to violent conduct, spitting, biting, or extremely offensive, insulting and/or abusive actions [p. 154].","77, 154, 176",154,UNPARSEABLE,"The reference lists five categories: goal/no goal, penalty/no penalty, red card, mistaken identity, and the wrongly awarded corner kick. The model answer lists all five. It adds that the red card cate",
+G21,lookup,When is a player in an offside position?,"When any part of head, body or feet is in the opponents' half and nearer to their goal line than both the ball and the second-last opponent.","A player is in an offside position if [p. 109]:
+
+• any part of the head, body or feet is in the opponents' half (excluding the halfway line) AND
+• any part of the head, body or feet is nearer to the opponents' goal line than both the ball and the second-last opponent
+
+**Exception:** A player is NOT in an offside position if level with the second-last opponent or the last two opponents [p. 109].
+
+**Note:** The hands and arms are not considered when determining offside position [p. 109].",109,109,CORRECT,"The answer matches the reference: any part of head, body or feet in the opponents' half and nearer to their goal line than both the ball and the second-last opponent, with correct added details on the halfway line, being level, and hands/arms.",CORRECT
+G22,paraphrase,Do arms count when deciding if someone is offside?,No. Hands and arms are not considered; the upper boundary of the arm is in line with the bottom of the armpit.,"No, arms do not count when deciding if someone is offside. [p. 109]
+
+The Laws state: ""The hands and arms of all players, including the goalkeepers, are not considered. For the purposes of determining offside, the upper boundary of the arm is in line with the bottom of the armpit."" [p. 109]
+
+This means only the head, body, or feet are used to determine if a player is in an offside position.",109,109,CORRECT,"The answer says arms do not count and quotes the armpit boundary, matching the reference, and its added note that only the head, body or feet count is consistent with the Laws.",CORRECT
+G23,exception,Is a player offside if they receive the ball directly from a throw-in?,"No. There is no offside offence when receiving the ball directly from a goal kick, throw-in or corner kick.","No, a player is not offside if they receive the ball directly from a throw-in. [p. 111]
+
+There is no offside offence if a player receives the ball directly from a throw-in. [p. 111]",111,111,CORRECT,"The model answer states that a player receiving the ball directly from a throw-in is not offside, which matches the reference answer's key fact.",CORRECT
+G24,paraphrase,Is it against the rules just to stand in an offside position?,No. A player is only penalised on becoming involved in active play.,"No, it is not against the rules just to stand in an offside position. [p. 109]
+
+""It is not an offence to be in an offside position."" A player is only penalised for offside when they become ""involved in active play"" by either playing/touching the ball or interfering with an opponent. [p. 109]",109,109,CORRECT,"The answer says no, being in an offside position is not an offence, and that a player is penalised only on becoming involved in active play, which matches the reference.",CORRECT
+G25,exception,When is a handball an offence?,"When a player deliberately touches the ball with the hand/arm, or touches it when the hand/arm has made the body unnaturally bigger.","A handball is an offence in the following circumstances [p. 116]:
+
+1. **Deliberate touch**: When a player deliberately touches the ball with their hand/arm, for example by moving the hand/arm towards the ball
+
+2. **Unnatural body position**: When a player touches the ball with their hand/arm when it has made their body unnaturally bigger. A player is considered to have made their body unnaturally bigger when the position of their hand/arm is not a consequence of, or justifiable by, the player's body movement for that specific situation
+
+3. **Scoring**: When a player scores in the opponents' goal:
+   - directly from their hand/arm, even if accidental (including by the goalkeeper)
+   - immediately after the ball has touched their hand/arm, even if accidental
+
+It's important to note that ""not every touch of a player's hand/arm with the ball is an offence"" [p. 116].",116,116,CORRECT,"The answer states both key facts from the reference (deliberate touch, and touch when the hand/arm has made the body unnaturally bigger) and adds correct detail about scoring from handball that does not contradict the reference.",CORRECT
+G26,exception,When is a goalkeeper not allowed to handle the ball?,"After a deliberate kick from a team-mate, or after receiving it directly from a team-mate's throw-in (unless the goalkeeper has clearly kicked or tried to kick it to release it into play).","A goalkeeper is not allowed to handle the ball in the following situations [p. 116, 118]:
+
+1. **Outside the penalty area** – The goalkeeper has the same restrictions on handling as any other player [p. 116]
+
+2. **After deliberately kicked passes from teammates** – The goalkeeper cannot touch the ball with their hand/arm after it has been deliberately kicked to them by a team-mate [p. 118]
+
+3. **After throw-ins from teammates** – The goalkeeper cannot touch the ball with their hand/arm after receiving it directly from a throw-in taken by a team-mate [p. 118]
+
+4. **After releasing the ball** – The goalkeeper cannot touch the ball with the hand/arm after releasing it and before it has touched another player [p. 118]
+
+If a goalkeeper handles the ball when not permitted, an indirect free kick is awarded [p. 116, 118]. However, there is no disciplinary sanction unless the offense stops a promising attack or denies an opponent a goal or obvious goal-scoring opportunity [p. 116].","116, 118",118,UNPARSEABLE,"The model answer includes both key facts: no handling after a deliberate kick from a team-mate, and no handling after receiving the ball directly from a team-mate's throw-in. It omits the exception in",
+G27,lookup,What are some offences punished with an indirect free kick?,"E.g. playing in a dangerous manner, impeding an opponent without contact, dissent or offensive language.","According to the Laws of the Game, the following offences are punished with an indirect free kick [p. 118]:
+
+**By any player:**
+• Playing in a dangerous manner
+• Impeding the progress of an opponent without any contact
+• Dissent, using offensive, insulting or abusive language and/or actions or other verbal offences
+• Preventing the goalkeeper from releasing the ball from their hands, or kicking/attempting to kick the ball when the goalkeeper is releasing it
+• Initiating a deliberate trick to pass the ball to the goalkeeper with the head, chest, knee, etc. to circumvent the Law
+• Any other offence not mentioned in the Laws for which play is stopped to caution or send off a player
+
+**By a goalkeeper inside their penalty area:**
+• Touching the ball with the hand/arm after releasing it and before it has touched another player
+• Touching the ball with the hand/arm after it has been deliberately kicked to them by a team-mate or received directly from a throw-in taken by a team-mate (unless they have clearly kicked or attempted to kick it to release it into play) [p. 118]",118,118,CORRECT,"The answer lists playing in a dangerous manner, impeding an opponent without contact, and dissent/offensive language, matching the reference examples, and the extra items it adds are consistent with the Laws.",CORRECT
+G28,lookup,"What counts as a caution for unsporting behaviour, for example?",E.g. attempting to deceive the referee by feigning injury or pretending to have been fouled (simulation).,"According to the Laws, a player must be cautioned for unsporting behaviour in several circumstances, including if a player: [p. 122]
+
+- Attempts to deceive the referee, e.g. by feigning injury or pretending to have been fouled (simulation)
+- Changes places with the goalkeeper during play or without the referee's permission
+- Commits a reckless direct free kick offence
+- Handles the ball to interfere with or stop a promising attack (except in certain penalty kick situations)
+- Commits any other offence which interferes with or stops a promising attack
+- Handles the ball in an attempt to score a goal
+
+Additionally, caution offences include: [p. 125]
+
+- Clearly or persistently not respecting the confines of their team's technical area
+- Delaying the restart of play by their team
+- Deliberately entering the opposing team's technical area (non-confrontational)
+- Dissent by word or action, including throwing/kicking drinks bottles or other objects
+- Actions showing a clear lack of respect for match officials
+
+Physical or aggressive behaviour (including spitting or biting), and receiving a second caution in the same match, also result in a caution. [p. 126]","122, 125, 126",122,CORRECT,"The model answer includes the key example from the reference (deceiving the referee by feigning injury or pretending to have been fouled/simulation) and its extra items largely reflect actual Laws content, none contradicting the reference.",CORRECT
+G29,exception,When must a player be sent off for a handball offence?,When it denies the opposing team a goal or an obvious goal-scoring opportunity by deliberate handball (except a goalkeeper inside their own penalty area).,"A player must be sent off for a handball offence in these situations [p. 123]:
+
+1. **Deliberate handball denying a goal or obvious goal-scoring opportunity** – anywhere on the field, except a goalkeeper within their own penalty area [p. 123]
+
+2. **Non-deliberate handball denying a goal or obvious goal-scoring opportunity** – when committed outside their own penalty area [p. 123]
+
+Additionally, when a non-deliberate handball offence in the penalty area denies an obvious goal-scoring opportunity and a penalty kick is awarded, the player is **cautioned** (not sent off) [p. 124].
+
+For deliberate handball offences that deny a goal or obvious goal-scoring opportunity, the player is sent off regardless of where on the field the offence occurs, with the exception that a goalkeeper is not sent off for this offence within their own penalty area [p. 124].","123, 124","123, 124",UNPARSEABLE,,
+G30,exception,"If the referee plays advantage for an offence that deserves a card, when is the card shown?",When the ball is next out of play.,"If the referee plays advantage for an offence that would warrant a caution or sending-off, the card is shown **when the ball is next out of play** [p. 120].
+
+However, there is an important exception: if the offence was denying the opposing team an obvious goal-scoring opportunity (DOGSO) and a goal is scored by the non-offending team as a result of the advantage being played, **there is no disciplinary sanction at all** [p. 120].",120,120,UNPARSEABLE,,
+G31,exception,Can a goal be scored directly from a goal kick?,"Yes, but only against the opposing team; if it enters the kicker's own goal a corner kick is awarded.","Yes, a goal may be scored directly from a goal kick, but only against the opposing team. If the ball directly enters the kicker's goal, a corner kick is awarded to the opponents instead [p. 145].",145,145,CORRECT,"The model answer states that a goal can be scored directly from a goal kick against the opposing team only, and that a corner kick is awarded if the ball enters the kicker's own goal, matching the reference.",CORRECT
+G32,exception,What is awarded if a corner kick goes directly into the kicker's own goal?,A corner kick to the opponents.,"If a corner kick goes directly into the kicker's own goal, a goal kick is awarded to the opponents [p. 150].
+
+This is covered under the corner kick rules, which state that ""if a direct or indirect free kick is kicked directly into the team's own goal, a corner kick is awarded"" [p. 131]. However, the specific provision for corner kicks clarifies that a goal may be scored directly from a corner kick only against the opposing team; if the ball directly enters the kicker's goal, the result is a goal kick to the opponents [p. 150].","131, 150","98, 145, 149",INCORRECT,"The model says a goal kick is awarded to the opponents, but the reference says a corner kick to the opponents.",INCORRECT
+G33,lookup,When must referees caution a player for delaying a restart?,When players excessively delay the restart of play.,"Referees must caution players who excessively delay the restart of play in these situations [p. 123, 181]:
+
+• Appearing to take a throw-in but suddenly leaving it to a team-mate to take
+• Delaying leaving the field of play when being substituted
+• Excessively delaying a restart
+• Kicking or carrying the ball away, or provoking a confrontation by deliberately touching the ball after the referee has stopped play
+• Taking a free kick from the wrong position to force a retake
+
+Additionally, referees must caution players for delaying restarts as outlined in Laws 3, 15 and 16 and their protocols [p. 123].
+
+**Important note:** For throw-ins and goal kicks specifically, a caution applies only if the player or team-mate excessively delays the restart **by the opposing team** after the restart has been awarded to them—since the referee can punish the initial delay by awarding the restart to the opposing team [p. 26, 181].","26, 123, 181","123, 181",UNPARSEABLE,,
+G34,lookup,Who gets a dropped ball when play stopped inside the penalty area?,It is dropped for the defending team's goalkeeper in their penalty area.,"When play is stopped inside the penalty area, the referee drops the ball for the defending team's goalkeeper in their penalty area [p. 98].",98,98,CORRECT,"The model answer states the ball is dropped for the defending team's goalkeeper in their penalty area, matching the reference.",CORRECT
+N01,new_2026_27,What is the time limit for a player to leave the field when being substituted?,Ten seconds; if exceeded the substitute cannot enter until the first stoppage after one minute has elapsed.,"The time limit for a player being substituted to leave the field of play is **ten seconds** [p. 171, 22].
+
+This ten-second period begins once the substitution board has been shown or, where there is no substitution board, the referee signals for the substitution to take place [p. 22]. The player must leave at the nearest point on the boundary line, unless the referee indicates otherwise [p. 22].","22, 171",167,PARTIAL,It correctly states ten seconds but omits the consequence that the substitute cannot enter until the first stoppage after one minute has elapsed.,PARTIAL
+N02,new_2026_27,How long must a player who received treatment on the field stay off after play restarts?,One minute after play has restarted (barring certain exceptions).,"An injured player who receives treatment or assessment on the field of play must leave and remain off the field for **one minute (running clock) after play has restarted** [p. 24, 75].
+
+The player may re-enter after this one-minute period has elapsed. If the ball is in play during re-entry, they must enter from the touchline; if the ball is out of play, they may enter from any boundary line [p. 75].","24, 75",167,CORRECT,The model answer gives the same key fact as the reference (one minute after play has restarted) and the extra re-entry detail does not contradict it.,CORRECT
+N03,new_2026_27,Is the penalty taker still automatically cautioned if the goalkeeper and kicker offend at the same time?,No. The automatic caution for the kicker was removed in 2026/27.,"No. The penalty taker is no longer automatically cautioned if the goalkeeper and kicker offend at the same time.
+
+According to the amendments, this automatic caution has been removed. The explanation states: ""Removal of the automatic caution (YC) for the kicker if they and the goalkeeper offend at the same time"" [p. 168].
+
+For a regular penalty kick during match play, when both offend simultaneously, an indirect free kick is awarded to the defending team and the kicker is cautioned [p. 182]. However, for penalty shoot-outs, if both offend at the same time, the kick is recorded as missed and the kicker is cautioned [p. 179].","168, 179, 182",168,UNPARSEABLE,"{""verdict"":""PARTIAL"",""reason"":""It correctly says the autom",
+N04,new_2026_27,Is a yellow card still given for denying an obvious goal-scoring opportunity if advantage is played and a goal is scored?,No. There is no caution if advantage is played and a goal is scored.,"No, a yellow card is not given in this situation. [p. 120]
+
+According to the Laws, if the referee plays advantage for a denying obvious goal-scoring opportunity (DOGSO) offence and a goal is scored by the non-offending team as a result, ""there is no disciplinary sanction."" [p. 120] This exception applies even though a caution for unsporting behaviour would normally be issued for a DOGSO offence. [p. 180]","120, 180",168,UNPARSEABLE,,
+N05,new_2026_27,How many substitutes are allowed in senior international friendlies?,"Eight, or eleven if both teams agree and inform the referee in advance (three substitution opportunities still apply).","In senior 'A' international team friendly matches, a maximum of **eight substitutes** may be used [p. 60]. 
+
+However, if both teams agree in advance and inform the referee before the match, they may use up to a maximum of **eleven substitutes** [p. 60]. In this case, each team will be restricted to three substitution opportunities [p. 167].","60, 167",167,CORRECT,"The answer gives eight substitutes, up to eleven if both teams agree and inform the referee in advance, and keeps the three-opportunity limit, which matches the reference.",CORRECT
+M01,multi_rule,A goalkeeper holds the ball too long inside their area. What is awarded and can opponents challenge them meanwhile?,A corner kick is awarded for more than eight seconds; opponents cannot challenge a goalkeeper who is in control of the ball.,"Based on the excerpts provided:
+
+**What is awarded:** A corner kick is awarded if a goalkeeper controls the ball with their hand(s)/arm(s) for more than eight seconds before releasing it [p. 119, 184].
+
+**Can opponents challenge them:** No. ""A goalkeeper cannot be challenged by an opponent when in control of the ball with their hand(s)/arm(s)"" [p. 119].
+
+The referee decides when the goalkeeper has control and begins counting the eight seconds, visually counting down the last five seconds with a raised hand [p. 119].","119, 184",119,CORRECT,"The answer states that a corner kick is awarded for holding the ball more than eight seconds and that opponents cannot challenge a goalkeeper in control of the ball, matching the reference; the extra detail on the referee's count does not contradict it.",CORRECT
+M02,multi_rule,One team has only six players because a player deliberately left the field. Does the referee have to stop play?,"No, advantage may be played, but the match must not resume after the ball goes out of play if a team has fewer than seven players.","No, the referee is not obliged to stop play in this situation. [p. 59]
+
+According to the Laws, ""If a team has fewer than seven players because one or more players has deliberately left the field of play, the referee is not obliged to stop play and the advantage may be played."" However, the match must not resume after the ball has gone out of play if a team does not have the minimum of seven players. [p. 59]",59,59,CORRECT,"The model answer states that the referee need not stop play and may play advantage, and that the match must not resume after the ball goes out of play if a team has fewer than seven players, which matches the reference.",CORRECT
+U01,unanswerable,Who won the 2018 FIFA World Cup?,Not in the Laws of the Game; the system should say it cannot find this.,"I can't find this in the provided Laws of the Game.
+
+The excerpts provided contain the IFAB Laws of the Game 2026/27 and do not include information about historical FIFA World Cup results.",,,CORRECT_REFUSAL,,
+U02,unanswerable,How much are referees paid per match?,Not in the Laws of the Game; the system should say it cannot find this.,"I can't find this in the provided Laws of the Game.
+
+The excerpts provided discuss the roles, responsibilities, and equipment of match officials, but do not contain any information about referee compensation or payment.",,,CORRECT_REFUSAL,,
+U03,unanswerable,What is the maximum transfer fee a club can pay for a player?,Not in the Laws of the Game; the system should say it cannot find this.,"I can't find this in the provided Laws of the Game.
+
+The excerpts provided cover substitution rules and player numbers, but do not contain any information about transfer fees.",,,CORRECT_REFUSAL,,
+U04,unanswerable,How many yellow cards lead to a one-match ban in the Champions League?,Not in the Laws of the Game; the system should say it cannot find this.,"I can't find this in the provided Laws of the Game.
+
+The excerpts explain the Laws of the Game regarding yellow cards and disciplinary action, but they do not contain information about specific competition rules for the Champions League or any details about one-match bans resulting from accumulated yellow cards. Such disciplinary consequences are determined by individual competition regulations rather than the IFAB Laws of the Game.",,,CORRECT_REFUSAL,,
+U05,unanswerable,Which formation should a team use to defend a one-goal lead?,Not in the Laws of the Game; the system should say it cannot find this.,"I can't find this in the provided Laws of the Game.
+
+The excerpts provided cover assistant referee positioning and positioning principles for referees, but they do not contain information about team formations or defensive strategies for protecting a lead.",,,CORRECT_REFUSAL,,
