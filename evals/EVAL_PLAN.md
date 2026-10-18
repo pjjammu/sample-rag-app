@@ -18,22 +18,24 @@ A repeatable evaluation process for this RAG app:
 4. **One change per experiment.**
 5. **A stage is finished only when every "done when" line is true.**
 
-**Current stage: 0**
+**Current stage: 1**
 
 ---
 
 ## Stage 0: Freeze and record the baseline (no new code, about 30 minutes)
 
-- [ ] 0.1 Commit `golden_set.jsonl`, `golden_set.sha256`, `GOLDEN_SET_CHANGELOG.md` and `GOLDEN_SET_ERRATA.md`. Tag the commit `golden-v2`.
-- [ ] 0.2 Save `answer_review_fixed.csv` as `baseline/B0_generation_graded.csv`. These graded answers are the B0 generation outputs. Do not regenerate them.
-- [ ] 0.3 Run retrieval only on the frozen file: `python evaluate.py golden_set.jsonl --namespace laws-1200-150`. Save the output as `baseline/B0_retrieval.json`.
-- [ ] 0.4 Write `baseline/B0.md` with two tables:
+- [x] 0.1 Commit `golden_set.jsonl`, `golden_set.sha256`, `GOLDEN_SET_CHANGELOG.md` and `GOLDEN_SET_ERRATA.md`. Tag the commit `golden-v2`.
+- [x] 0.2 Save `answer_review_fixed.csv` as `baseline/B0_generation_graded.csv`. These graded answers are the B0 generation outputs. Do not regenerate them.
+- [x] 0.3 Run retrieval only on the frozen file: `python evaluate.py golden_set.jsonl --namespace laws-1200-150`. Save the output as `baseline/B0_retrieval.json`.
+- [x] 0.4 Write `baseline/B0.md` with two tables:
   - Retrieval: recall@1/3/5/10 and MRR (strict and page-based), from 0.3.
   - Generation: 36 of 41 correct, 4 partial, 1 incorrect, 5 of 5 correct refusals, judge-versus-me agreement 39 of 41, 0 of 41 false refusals, 0 of 41 unsupported citations.
 
 **Done when:** `baseline/B0.md` exists with both tables and the commit is tagged.
 
 ## Stage 1: One-command harness (`run_eval.py`, about 2 hours)
+
+Folders: `evals/golden_set/` (frozen golden set and checksum), `evals/baseline/` (B0), `evals/runs/` (one folder per run, plus `results.csv`).
 
 The script:
 
@@ -108,3 +110,4 @@ Each experiment is one change, one run through the harness, one row in `results.
 ## Change log
 
 - 2026-10-18: plan created. Golden set frozen at v2.
+- 2026-10-18: Stage 0 complete (baseline recorded in `evals/baseline`). Stage 1 started: `run_eval.py` written.

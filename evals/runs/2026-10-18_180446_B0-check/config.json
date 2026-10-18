@@ -1,0 +1,24 @@
+{
+  "label": "B0-check",
+  "started_at": "2026-10-18T18:04:46",
+  "namespace": "laws-1200-150",
+  "chunking": "RecursiveCharacterTextSplitter, 1200 characters, 150 overlap, split per page",
+  "k": 5,
+  "retrieval_depth": 10,
+  "embed_model": "voyage-4-lite",
+  "index": "laws-rag",
+  "gen_model": "claude-haiku-4-5-20251001",
+  "judge_model": "claude-sonnet-5-5",
+  "max_tokens": 600,
+  "system_prompt_sha256": "8098e75d5e489248",
+  "golden_path": "C:\\Users\\prabh\\Documents\\RAG_project\\sample-rag-app\\evals\\golden_set\\golden_set.jsonl",
+  "golden_sha256": "623f69a0baa72f1e771e58eeba4219d15a3af3d082eb58c7f2a568301aeda54e",
+  "n_questions": 46,
+  "partial": false,
+  "git": {
+    "commit": "6bc5700",
+    "dirty": true
+  },
+  "generate": true,
+  "judge": true
+}

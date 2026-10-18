@@ -1,0 +1,3734 @@
+{
+  "config": {
+    "label": "B0-check",
+    "started_at": "2026-10-18T18:04:46",
+    "namespace": "laws-1200-150",
+    "chunking": "RecursiveCharacterTextSplitter, 1200 characters, 150 overlap, split per page",
+    "k": 5,
+    "retrieval_depth": 10,
+    "embed_model": "voyage-4-lite",
+    "index": "laws-rag",
+    "gen_model": "claude-haiku-4-5-20251001",
+    "judge_model": "claude-sonnet-5-5",
+    "max_tokens": 600,
+    "system_prompt_sha256": "8098e75d5e489248",
+    "golden_path": "C:\\Users\\prabh\\Documents\\RAG_project\\sample-rag-app\\evals\\golden_set\\golden_set.jsonl",
+    "golden_sha256": "623f69a0baa72f1e771e58eeba4219d15a3af3d082eb58c7f2a568301aeda54e",
+    "n_questions": 46,
+    "partial": false,
+    "git": {
+      "commit": "6bc5700",
+      "dirty": true
+    },
+    "generate": true,
+    "judge": true
+  },
+  "rows": [
+    {
+      "id": "G01",
+      "type": "lookup",
+      "answerable": true,
+      "question": "How many players can each team have on the field?",
+      "expected_pages": [
+        59
+      ],
+      "key_phrase": "a maximum of eleven players",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.67803663,
+      "retrieved": [
+        {
+          "id": "p059-0061",
+          "page": 59,
+          "score": 0.67803663
+        },
+        {
+          "id": "p059-0062",
+          "page": 59,
+          "score": 0.567753851
+        },
+        {
+          "id": "p060-0064",
+          "page": 60,
+          "score": 0.564644814
+        },
+        {
+          "id": "p170-0212",
+          "page": 170,
+          "score": 0.563719809
+        },
+        {
+          "id": "p167-0207",
+          "page": 167,
+          "score": 0.558221817
+        },
+        {
+          "id": "p063-0071",
+          "page": 63,
+          "score": 0.540823936
+        },
+        {
+          "id": "p065-0075",
+          "page": 65,
+          "score": 0.540183067
+        },
+        {
+          "id": "p020-0011",
+          "page": 20,
+          "score": 0.535185814
+        },
+        {
+          "id": "p105-0117",
+          "page": 105,
+          "score": 0.531201363
+        },
+        {
+          "id": "p060-0063",
+          "page": 60,
+          "score": 0.525689185
+        }
+      ],
+      "gen": {
+        "answer": "Each team can have a maximum of eleven players on the field, with one required to be the goalkeeper [p. 59]. However, a match may not start or continue if either team has fewer than seven players [p. 59].",
+        "refused": false,
+        "cited_pages": [
+          59
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1309,
+        "output_tokens": 52,
+        "latency_s": 1.351165600004606,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states a maximum of eleven players per team with one being the goalkeeper, matching the reference, and the extra detail about the seven-player minimum is correct per the Laws."
+    },
+    {
+      "id": "G02",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "Can a game start if one side only has six people?",
+      "expected_pages": [
+        59,
+        107
+      ],
+      "key_phrase": "fewer than seven players",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.461222589,
+      "retrieved": [
+        {
+          "id": "p059-0061",
+          "page": 59,
+          "score": 0.461222589
+        },
+        {
+          "id": "p060-0064",
+          "page": 60,
+          "score": 0.349897385
+        },
+        {
+          "id": "p107-0120",
+          "page": 107,
+          "score": 0.346800834
+        },
+        {
+          "id": "p170-0212",
+          "page": 170,
+          "score": 0.327593833
+        },
+        {
+          "id": "p021-0012",
+          "page": 21,
+          "score": 0.324497223
+        },
+        {
+          "id": "p065-0075",
+          "page": 65,
+          "score": 0.322892189
+        },
+        {
+          "id": "p063-0071",
+          "page": 63,
+          "score": 0.321616173
+        },
+        {
+          "id": "p105-0116",
+          "page": 105,
+          "score": 0.320860893
+        },
+        {
+          "id": "p059-0062",
+          "page": 59,
+          "score": 0.320051223
+        },
+        {
+          "id": "p160-0203",
+          "page": 160,
+          "score": 0.315903664
+        }
+      ],
+      "gen": {
+        "answer": "No, a game cannot start if one side only has six people. [p. 59]\n\nAccording to the Laws, \"A match may not start or continue if either team has fewer than seven players.\" [p. 59] The minimum number of players required for a match to start is seven per team.",
+        "refused": false,
+        "cited_pages": [
+          59
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1199,
+        "output_tokens": 68,
+        "latency_s": 1.9336632000049576,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer says no and quotes the Law that a match may not start or continue if either team has fewer than seven players, matching the reference."
+    },
+    {
+      "id": "G03",
+      "type": "lookup",
+      "answerable": true,
+      "question": "How long does a standard match last?",
+      "expected_pages": [
+        93
+      ],
+      "key_phrase": "two equal halves of 45 minutes",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.397157669,
+      "retrieved": [
+        {
+          "id": "p093-0107",
+          "page": 93,
+          "score": 0.397157669
+        },
+        {
+          "id": "p026-0022",
+          "page": 26,
+          "score": 0.363739967
+        },
+        {
+          "id": "p094-0108",
+          "page": 94,
+          "score": 0.347277671
+        },
+        {
+          "id": "p163-0205",
+          "page": 163,
+          "score": 0.340443641
+        },
+        {
+          "id": "p164-0206",
+          "page": 164,
+          "score": 0.335230827
+        },
+        {
+          "id": "p047-0047",
+          "page": 47,
+          "score": 0.333476067
+        },
+        {
+          "id": "p060-0063",
+          "page": 60,
+          "score": 0.332363158
+        },
+        {
+          "id": "p033-0033",
+          "page": 33,
+          "score": 0.323007584
+        },
+        {
+          "id": "p059-0061",
+          "page": 59,
+          "score": 0.321424454
+        },
+        {
+          "id": "p197-0250",
+          "page": 197,
+          "score": 0.318963051
+        }
+      ],
+      "gen": {
+        "answer": "A standard match lasts for two equal halves of 45 minutes each [p. 93]. However, this duration may only be reduced if agreed between the referee and the two teams before the start of the match and if in accordance with competition rules [p. 93].",
+        "refused": false,
+        "cited_pages": [
+          93
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 938,
+        "output_tokens": 61,
+        "latency_s": 0.9292769999883603,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer gives two equal 45-minute halves and says the duration can be reduced only by prior agreement and in line with competition rules, matching the reference."
+    },
+    {
+      "id": "G04",
+      "type": "lookup",
+      "answerable": true,
+      "question": "What is the maximum length of the half-time interval?",
+      "expected_pages": [
+        93
+      ],
+      "key_phrase": "entitled to an interval at half-time, not exceeding 15 minutes",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.428219825,
+      "retrieved": [
+        {
+          "id": "p093-0107",
+          "page": 93,
+          "score": 0.428219825
+        },
+        {
+          "id": "p094-0108",
+          "page": 94,
+          "score": 0.371751815
+        },
+        {
+          "id": "p046-0046",
+          "page": 46,
+          "score": 0.335054427
+        },
+        {
+          "id": "p197-0250",
+          "page": 197,
+          "score": 0.334397346
+        },
+        {
+          "id": "p026-0022",
+          "page": 26,
+          "score": 0.306201965
+        },
+        {
+          "id": "p025-0020",
+          "page": 25,
+          "score": 0.300590545
+        },
+        {
+          "id": "p022-0015",
+          "page": 22,
+          "score": 0.299278289
+        },
+        {
+          "id": "p033-0034",
+          "page": 33,
+          "score": 0.291752845
+        },
+        {
+          "id": "p047-0047",
+          "page": 47,
+          "score": 0.288901359
+        },
+        {
+          "id": "p023-0016",
+          "page": 23,
+          "score": 0.288531333
+        }
+      ],
+      "gen": {
+        "answer": "The maximum length of the half-time interval is **15 minutes** [p. 93].\n\nThe Laws state that \"Players are entitled to an interval at half-time, not exceeding 15 minutes\" [p. 93]. However, competition rules must specify the actual duration, and it may only be altered with the referee's permission [p. 93].",
+        "refused": false,
+        "cited_pages": [
+          93
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1074,
+        "output_tokens": 82,
+        "latency_s": 1.1586094000085723,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states the maximum half-time interval is 15 minutes, matching the reference, and its extra detail about competition rules and referee permission does not contradict it."
+    },
+    {
+      "id": "G05",
+      "type": "lookup",
+      "answerable": true,
+      "question": "What circumference must the ball have?",
+      "expected_pages": [
+        55
+      ],
+      "key_phrase": "between 68 cm (27 ins) and 70 cm (28 ins)",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.597718239,
+      "retrieved": [
+        {
+          "id": "p055-0058",
+          "page": 55,
+          "score": 0.597718239
+        },
+        {
+          "id": "p045-0045",
+          "page": 45,
+          "score": 0.477506667
+        },
+        {
+          "id": "p046-0046",
+          "page": 46,
+          "score": 0.464886665
+        },
+        {
+          "id": "p055-0059",
+          "page": 55,
+          "score": 0.459867507
+        },
+        {
+          "id": "p051-0053",
+          "page": 51,
+          "score": 0.453974724
+        },
+        {
+          "id": "p048-0049",
+          "page": 48,
+          "score": 0.452624321
+        },
+        {
+          "id": "p047-0047",
+          "page": 47,
+          "score": 0.441804886
+        },
+        {
+          "id": "p201-0255",
+          "page": 201,
+          "score": 0.441309
+        },
+        {
+          "id": "p109-0122",
+          "page": 109,
+          "score": 0.415516853
+        },
+        {
+          "id": "p050-0051",
+          "page": 50,
+          "score": 0.41534996
+        }
+      ],
+      "gen": {
+        "answer": "The ball must have a circumference of between 68 cm (27 ins) and 70 cm (28 ins) [p. 55].",
+        "refused": false,
+        "cited_pages": [
+          55
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1061,
+        "output_tokens": 37,
+        "latency_s": 0.5952308000123594,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states the circumference as between 68 cm and 70 cm, matching the reference, and the added inch conversions are correct."
+    },
+    {
+      "id": "G06",
+      "type": "lookup",
+      "answerable": true,
+      "question": "How much must the ball weigh at the start of the match?",
+      "expected_pages": [
+        55
+      ],
+      "key_phrase": "between 410 g (14 oz) and 450 g (16 oz)",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.623620093,
+      "retrieved": [
+        {
+          "id": "p055-0058",
+          "page": 55,
+          "score": 0.623620093
+        },
+        {
+          "id": "p056-0060",
+          "page": 56,
+          "score": 0.464376479
+        },
+        {
+          "id": "p055-0059",
+          "page": 55,
+          "score": 0.462195456
+        },
+        {
+          "id": "p178-0225",
+          "page": 178,
+          "score": 0.452981025
+        },
+        {
+          "id": "p059-0061",
+          "page": 59,
+          "score": 0.448960304
+        },
+        {
+          "id": "p097-0110",
+          "page": 97,
+          "score": 0.446942359
+        },
+        {
+          "id": "p101-0113",
+          "page": 101,
+          "score": 0.441530257
+        },
+        {
+          "id": "p098-0112",
+          "page": 98,
+          "score": 0.439956695
+        },
+        {
+          "id": "p068-0078",
+          "page": 68,
+          "score": 0.436389
+        },
+        {
+          "id": "p050-0052",
+          "page": 50,
+          "score": 0.434049636
+        }
+      ],
+      "gen": {
+        "answer": "The ball must weigh between 410 g (14 oz) and 450 g (16 oz) at the start of the match. [p. 55]",
+        "refused": false,
+        "cited_pages": [
+          55
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1242,
+        "output_tokens": 41,
+        "latency_s": 0.7818798000225797,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states the 410 g to 450 g range, matching the reference, and the added ounce conversions (14 oz and 16 oz) are consistent with the Laws."
+    },
+    {
+      "id": "G07",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "How big is the goal?",
+      "expected_pages": [
+        50
+      ],
+      "key_phrase": "inside of the posts is 7.32 m",
+      "alt_phrases": [],
+      "rank": 2,
+      "page_rank": 2,
+      "top_score": 0.42865181,
+      "retrieved": [
+        {
+          "id": "p051-0053",
+          "page": 51,
+          "score": 0.42865181
+        },
+        {
+          "id": "p050-0051",
+          "page": 50,
+          "score": 0.382253647
+        },
+        {
+          "id": "p046-0046",
+          "page": 46,
+          "score": 0.375230789
+        },
+        {
+          "id": "p048-0048",
+          "page": 48,
+          "score": 0.352532387
+        },
+        {
+          "id": "p103-0114",
+          "page": 103,
+          "score": 0.34431076
+        },
+        {
+          "id": "p047-0047",
+          "page": 47,
+          "score": 0.343388557
+        },
+        {
+          "id": "p045-0045",
+          "page": 45,
+          "score": 0.342884094
+        },
+        {
+          "id": "p216-0269",
+          "page": 216,
+          "score": 0.342280388
+        },
+        {
+          "id": "p181-0230",
+          "page": 181,
+          "score": 0.33032608
+        },
+        {
+          "id": "p229-0285",
+          "page": 229,
+          "score": 0.314587623
+        }
+      ],
+      "gen": {
+        "answer": "The goal dimensions are [p. 50]:\n\n- **Width (distance between inside of posts):** 7.32 m (8 yards)\n- **Height (from ground to lower edge of crossbar):** 2.44 m (8 feet)\n\nThe goalposts and crossbar must not exceed 12 cm (5 inches) in width and depth [p. 50].",
+        "refused": false,
+        "cited_pages": [
+          50
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1387,
+        "output_tokens": 92,
+        "latency_s": 1.191433900006814,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer gives 7.32 m between the inside of the posts and 2.44 m from the ground to the lower edge of the crossbar, matching the reference, and the added 12 cm post width detail is correct."
+    },
+    {
+      "id": "G08",
+      "type": "lookup",
+      "answerable": true,
+      "question": "How far from the midpoint between the goalposts is the penalty mark?",
+      "expected_pages": [
+        48
+      ],
+      "key_phrase": "a penalty mark is made 11 m (12 yds) from the midpoint",
+      "alt_phrases": [],
+      "rank": 2,
+      "page_rank": 2,
+      "top_score": 0.666441,
+      "retrieved": [
+        {
+          "id": "p046-0046",
+          "page": 46,
+          "score": 0.666441
+        },
+        {
+          "id": "p048-0048",
+          "page": 48,
+          "score": 0.654856741
+        },
+        {
+          "id": "p051-0053",
+          "page": 51,
+          "score": 0.64135462
+        },
+        {
+          "id": "p048-0049",
+          "page": 48,
+          "score": 0.618705809
+        },
+        {
+          "id": "p045-0045",
+          "page": 45,
+          "score": 0.587499678
+        },
+        {
+          "id": "p047-0047",
+          "page": 47,
+          "score": 0.566588461
+        },
+        {
+          "id": "p050-0051",
+          "page": 50,
+          "score": 0.555522
+        },
+        {
+          "id": "p135-0166",
+          "page": 135,
+          "score": 0.547682822
+        },
+        {
+          "id": "p221-0273",
+          "page": 221,
+          "score": 0.520649
+        },
+        {
+          "id": "p050-0052",
+          "page": 50,
+          "score": 0.512575209
+        }
+      ],
+      "gen": {
+        "answer": "The penalty mark is 11 m (12 yds) from the midpoint between the goalposts. [p. 48]",
+        "refused": false,
+        "cited_pages": [
+          48
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1140,
+        "output_tokens": 33,
+        "latency_s": 0.7096071999985725,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states 11 m (12 yds), exactly matching the reference."
+    },
+    {
+      "id": "G09",
+      "type": "lookup",
+      "answerable": true,
+      "question": "How far must opponents be from the ball at a kick-off?",
+      "expected_pages": [
+        97
+      ],
+      "key_phrase": "at least 9.15 m (10 yds) from the ball until it is in play",
+      "alt_phrases": [],
+      "rank": 3,
+      "page_rank": 3,
+      "top_score": 0.643001616,
+      "retrieved": [
+        {
+          "id": "p132-0162",
+          "page": 132,
+          "score": 0.643001616
+        },
+        {
+          "id": "p133-0164",
+          "page": 133,
+          "score": 0.605146468
+        },
+        {
+          "id": "p097-0110",
+          "page": 97,
+          "score": 0.59880358
+        },
+        {
+          "id": "p098-0112",
+          "page": 98,
+          "score": 0.576049864
+        },
+        {
+          "id": "p222-0274",
+          "page": 222,
+          "score": 0.574573576
+        },
+        {
+          "id": "p051-0053",
+          "page": 51,
+          "score": 0.56112963
+        },
+        {
+          "id": "p047-0047",
+          "page": 47,
+          "score": 0.551357329
+        },
+        {
+          "id": "p046-0046",
+          "page": 46,
+          "score": 0.550703108
+        },
+        {
+          "id": "p119-0136",
+          "page": 119,
+          "score": 0.549472868
+        },
+        {
+          "id": "p098-0111",
+          "page": 98,
+          "score": 0.547412932
+        }
+      ],
+      "gen": {
+        "answer": "At a kick-off, the opponents of the team taking the kick-off must be at least 9.15 m (10 yds) from the ball until it is in play. [p. 97]",
+        "refused": false,
+        "cited_pages": [
+          97
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1601,
+        "output_tokens": 50,
+        "latency_s": 0.871521599998232,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states opponents must be at least 9.15 m (10 yds) from the ball until it is in play, matching the reference."
+    },
+    {
+      "id": "G10",
+      "type": "lookup",
+      "answerable": true,
+      "question": "What is the maximum number of substitutes in an official competition?",
+      "expected_pages": [
+        20,
+        59
+      ],
+      "key_phrase": "up to a maximum of five",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.654354155,
+      "retrieved": [
+        {
+          "id": "p059-0062",
+          "page": 59,
+          "score": 0.654354155
+        },
+        {
+          "id": "p060-0064",
+          "page": 60,
+          "score": 0.630186081
+        },
+        {
+          "id": "p060-0063",
+          "page": 60,
+          "score": 0.626335204
+        },
+        {
+          "id": "p020-0011",
+          "page": 20,
+          "score": 0.622166634
+        },
+        {
+          "id": "p170-0212",
+          "page": 170,
+          "score": 0.6194821
+        },
+        {
+          "id": "p059-0061",
+          "page": 59,
+          "score": 0.599354684
+        },
+        {
+          "id": "p167-0207",
+          "page": 167,
+          "score": 0.584648132
+        },
+        {
+          "id": "p040-0042",
+          "page": 40,
+          "score": 0.576602
+        },
+        {
+          "id": "p061-0065",
+          "page": 61,
+          "score": 0.568277359
+        },
+        {
+          "id": "p039-0040",
+          "page": 39,
+          "score": 0.566321373
+        }
+      ],
+      "gen": {
+        "answer": "The maximum number of substitutes in an official competition is **five** [p. 59].\n\nThis applies to men's and women's competitions involving the 1st teams of clubs in the top division or senior 'A' international teams where competition rules permit a maximum of five substitutes. When five substitutes are used, each team has a maximum of three substitution opportunities, and may additionally make substitutions at half-time [p. 59].\n\nFor all other official competitions, a greater number of substitutes may be used if the teams agree and the referee is informed before the match; otherwise each team is allowed a maximum of six substitutes [p. 60].",
+        "refused": false,
+        "cited_pages": [
+          59,
+          60
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1293,
+        "output_tokens": 144,
+        "latency_s": 2.1151075000234414,
+        "truncated": false
+      },
+      "verdict": "PARTIAL",
+      "verdict_reason": "The model correctly gives five as the maximum, but it omits that FIFA, the confederation or the national association determines this. It also adds a doubtful claim that other official competitions may use more than five, which conflicts with a five-substitute maximum."
+    },
+    {
+      "id": "G11",
+      "type": "lookup",
+      "answerable": true,
+      "question": "How long can a goalkeeper control the ball with their hands before a corner kick is awarded?",
+      "expected_pages": [
+        11,
+        119,
+        149,
+        184
+      ],
+      "key_phrase": "for more than eight seconds",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.699118614,
+      "retrieved": [
+        {
+          "id": "p119-0136",
+          "page": 119,
+          "score": 0.699118614
+        },
+        {
+          "id": "p119-0137",
+          "page": 119,
+          "score": 0.685168326
+        },
+        {
+          "id": "p184-0235",
+          "page": 184,
+          "score": 0.679843903
+        },
+        {
+          "id": "p149-0184",
+          "page": 149,
+          "score": 0.639802
+        },
+        {
+          "id": "p184-0234",
+          "page": 184,
+          "score": 0.609218657
+        },
+        {
+          "id": "p145-0181",
+          "page": 145,
+          "score": 0.593790054
+        },
+        {
+          "id": "p116-0133",
+          "page": 116,
+          "score": 0.576953948
+        },
+        {
+          "id": "p027-0024",
+          "page": 27,
+          "score": 0.576561928
+        },
+        {
+          "id": "p149-0185",
+          "page": 149,
+          "score": 0.572649
+        },
+        {
+          "id": "p026-0023",
+          "page": 26,
+          "score": 0.572382927
+        }
+      ],
+      "gen": {
+        "answer": "A goalkeeper can control the ball with their hands for **more than eight seconds** before a corner kick is awarded [p. 119, 149].\n\nSpecifically, a corner kick is awarded if a goalkeeper, inside their penalty area, controls the ball with their hand(s)/arm(s) for more than eight seconds before releasing it. The referee will decide when the goalkeeper has control of the ball and the eight seconds begin, and will visually count down the last five seconds with a raised hand [p. 119].",
+        "refused": false,
+        "cited_pages": [
+          119,
+          149
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1451,
+        "output_tokens": 112,
+        "latency_s": 1.364974500000244,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer states more than eight seconds and that a corner kick is awarded, matching the reference; the extra detail about the referee's five-second countdown is consistent with the Laws."
+    },
+    {
+      "id": "G12",
+      "type": "lookup",
+      "answerable": true,
+      "question": "What happens if a throw-in goes directly into the opponents' goal?",
+      "expected_pages": [
+        141
+      ],
+      "key_phrase": "cannot be scored directly from a throw-in",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.626010895,
+      "retrieved": [
+        {
+          "id": "p141-0177",
+          "page": 141,
+          "score": 0.626010895
+        },
+        {
+          "id": "p142-0180",
+          "page": 142,
+          "score": 0.59731108
+        },
+        {
+          "id": "p098-0111",
+          "page": 98,
+          "score": 0.56948
+        },
+        {
+          "id": "p141-0178",
+          "page": 141,
+          "score": 0.569198668
+        },
+        {
+          "id": "p138-0173",
+          "page": 138,
+          "score": 0.5522843
+        },
+        {
+          "id": "p183-0233",
+          "page": 183,
+          "score": 0.55188942
+        },
+        {
+          "id": "p142-0179",
+          "page": 142,
+          "score": 0.551822662
+        },
+        {
+          "id": "p146-0183",
+          "page": 146,
+          "score": 0.550886154
+        },
+        {
+          "id": "p131-0161",
+          "page": 131,
+          "score": 0.547426224
+        },
+        {
+          "id": "p137-0170",
+          "page": 137,
+          "score": 0.543623
+        }
+      ],
+      "gen": {
+        "answer": "If a throw-in goes directly into the opponents' goal, a goal kick is awarded [p. 141].",
+        "refused": false,
+        "cited_pages": [
+          141
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1037,
+        "output_tokens": 27,
+        "latency_s": 0.6420368999824859,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states a goal kick is awarded, matching the reference; it does not explicitly say 'no goal' but this is implied by the goal kick award."
+    },
+    {
+      "id": "G13",
+      "type": "lookup",
+      "answerable": true,
+      "question": "Where must the ball be placed for a corner kick?",
+      "expected_pages": [
+        149
+      ],
+      "key_phrase": "placed in the corner area nearest to the point",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.61998558,
+      "retrieved": [
+        {
+          "id": "p149-0184",
+          "page": 149,
+          "score": 0.61998558
+        },
+        {
+          "id": "p213-0267",
+          "page": 213,
+          "score": 0.585907
+        },
+        {
+          "id": "p149-0185",
+          "page": 149,
+          "score": 0.578868866
+        },
+        {
+          "id": "p217-0270",
+          "page": 217,
+          "score": 0.575119
+        },
+        {
+          "id": "p214-0268",
+          "page": 214,
+          "score": 0.572664261
+        },
+        {
+          "id": "p145-0181",
+          "page": 145,
+          "score": 0.570197105
+        },
+        {
+          "id": "p131-0161",
+          "page": 131,
+          "score": 0.564227104
+        },
+        {
+          "id": "p119-0136",
+          "page": 119,
+          "score": 0.564040184
+        },
+        {
+          "id": "p141-0177",
+          "page": 141,
+          "score": 0.557606697
+        },
+        {
+          "id": "p098-0112",
+          "page": 98,
+          "score": 0.554574
+        }
+      ],
+      "gen": {
+        "answer": "The ball must be placed in the corner area nearest to the point where the ball passed over the goal line or the goalkeeper's position when penalised [p. 149].",
+        "refused": false,
+        "cited_pages": [
+          149
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1079,
+        "output_tokens": 39,
+        "latency_s": 0.7323649000027217,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states the ball is placed in the corner area nearest to where it crossed the goal line, or to the goalkeeper's position when penalised, matching the reference."
+    },
+    {
+      "id": "G14",
+      "type": "lookup",
+      "answerable": true,
+      "question": "Where must opponents be at a goal kick until the ball is in play?",
+      "expected_pages": [
+        145
+      ],
+      "key_phrase": "must be outside the penalty area until the ball is in play",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.620576918,
+      "retrieved": [
+        {
+          "id": "p145-0181",
+          "page": 145,
+          "score": 0.620576918
+        },
+        {
+          "id": "p097-0110",
+          "page": 97,
+          "score": 0.603347838
+        },
+        {
+          "id": "p217-0270",
+          "page": 217,
+          "score": 0.596571
+        },
+        {
+          "id": "p132-0162",
+          "page": 132,
+          "score": 0.592251837
+        },
+        {
+          "id": "p098-0112",
+          "page": 98,
+          "score": 0.589952528
+        },
+        {
+          "id": "p135-0167",
+          "page": 135,
+          "score": 0.577537656
+        },
+        {
+          "id": "p184-0234",
+          "page": 184,
+          "score": 0.571809828
+        },
+        {
+          "id": "p106-0118",
+          "page": 106,
+          "score": 0.570432723
+        },
+        {
+          "id": "p149-0184",
+          "page": 149,
+          "score": 0.569356
+        },
+        {
+          "id": "p214-0268",
+          "page": 214,
+          "score": 0.568725646
+        }
+      ],
+      "gen": {
+        "answer": "Opponents must be outside the penalty area until the ball is in play at a goal kick. [p. 145]",
+        "refused": false,
+        "cited_pages": [
+          145
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1564,
+        "output_tokens": 28,
+        "latency_s": 0.6773707999964245,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states opponents must be outside the penalty area until the ball is in play, matching the reference."
+    },
+    {
+      "id": "G15",
+      "type": "lookup",
+      "answerable": true,
+      "question": "When is the ball out of play?",
+      "expected_pages": [
+        101
+      ],
+      "key_phrase": "wholly passed over the goal line or touchline",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.600307465,
+      "retrieved": [
+        {
+          "id": "p101-0113",
+          "page": 101,
+          "score": 0.600307465
+        },
+        {
+          "id": "p098-0112",
+          "page": 98,
+          "score": 0.559591293
+        },
+        {
+          "id": "p121-0141",
+          "page": 121,
+          "score": 0.556901038
+        },
+        {
+          "id": "p178-0225",
+          "page": 178,
+          "score": 0.537701607
+        },
+        {
+          "id": "p136-0168",
+          "page": 136,
+          "score": 0.514137328
+        },
+        {
+          "id": "p064-0072",
+          "page": 64,
+          "score": 0.501664221
+        },
+        {
+          "id": "p109-0122",
+          "page": 109,
+          "score": 0.493156433
+        },
+        {
+          "id": "p127-0157",
+          "page": 127,
+          "score": 0.491272926
+        },
+        {
+          "id": "p128-0159",
+          "page": 128,
+          "score": 0.486818254
+        },
+        {
+          "id": "p132-0162",
+          "page": 132,
+          "score": 0.481779099
+        }
+      ],
+      "gen": {
+        "answer": "The ball is out of play when: [p. 101]\n\n• it has wholly passed over the goal line or touchline on the ground or in the air\n• play has been stopped by the referee\n• it touches a match official, remains on the field of play and:\n  - a team starts a promising attack, or\n  - the ball goes directly into the goal, or\n  - the team in possession of the ball changes\n\nIn all these cases, play is restarted with a dropped ball. [p. 101]",
+        "refused": false,
+        "cited_pages": [
+          101
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1294,
+        "output_tokens": 118,
+        "latency_s": 1.570751499995822,
+        "truncated": false
+      },
+      "verdict": "PARTIAL",
+      "verdict_reason": "It covers both key facts (wholly passed over the line; stopped by the referee), but the added claim that the ball is out of play when it touches an official and stays on the field is wrong, and it wrongly says all cases restart with a dropped ball."
+    },
+    {
+      "id": "G16",
+      "type": "lookup",
+      "answerable": true,
+      "question": "When is a goal scored?",
+      "expected_pages": [
+        103
+      ],
+      "key_phrase": "a goal is scored when the whole of the ball passes over the goal line",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.597760201,
+      "retrieved": [
+        {
+          "id": "p103-0114",
+          "page": 103,
+          "score": 0.597760201
+        },
+        {
+          "id": "p216-0269",
+          "page": 216,
+          "score": 0.547320366
+        },
+        {
+          "id": "p137-0171",
+          "page": 137,
+          "score": 0.543611586
+        },
+        {
+          "id": "p145-0181",
+          "page": 145,
+          "score": 0.540053368
+        },
+        {
+          "id": "p229-0285",
+          "page": 229,
+          "score": 0.509842
+        },
+        {
+          "id": "p137-0172",
+          "page": 137,
+          "score": 0.503535271
+        },
+        {
+          "id": "p122-0147",
+          "page": 122,
+          "score": 0.501684189
+        },
+        {
+          "id": "p098-0111",
+          "page": 98,
+          "score": 0.491733581
+        },
+        {
+          "id": "p131-0161",
+          "page": 131,
+          "score": 0.486394882
+        },
+        {
+          "id": "p228-0282",
+          "page": 228,
+          "score": 0.484165192
+        }
+      ],
+      "gen": {
+        "answer": "A goal is scored when the whole of the ball passes over the goal line, between the goalposts and under the crossbar, provided that no offence has been committed by the team scoring the goal [p. 103].\n\nAdditionally, a goal may be scored directly from a goal kick, but only against the opposing team; if the ball directly enters the kicker's goal, a corner kick is awarded to the opponents [p. 145].",
+        "refused": false,
+        "cited_pages": [
+          103,
+          145
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1191,
+        "output_tokens": 96,
+        "latency_s": 1.1359505000000354,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states all key facts (whole ball over the line, between the posts, under the crossbar, no offence by the scoring team), and its additional goal kick detail is consistent with the Laws."
+    },
+    {
+      "id": "G17",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "What gear do players have to wear?",
+      "expected_pages": [
+        67
+      ],
+      "key_phrase": "the compulsory equipment of a player comprises",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.634363234,
+      "retrieved": [
+        {
+          "id": "p067-0076",
+          "page": 67,
+          "score": 0.634363234
+        },
+        {
+          "id": "p068-0079",
+          "page": 68,
+          "score": 0.598788321
+        },
+        {
+          "id": "p067-0077",
+          "page": 67,
+          "score": 0.57272917
+        },
+        {
+          "id": "p068-0078",
+          "page": 68,
+          "score": 0.572240829
+        },
+        {
+          "id": "p173-0217",
+          "page": 173,
+          "score": 0.541472435
+        },
+        {
+          "id": "p069-0081",
+          "page": 69,
+          "score": 0.513380527
+        },
+        {
+          "id": "p203-0257",
+          "page": 203,
+          "score": 0.509608269
+        },
+        {
+          "id": "p069-0080",
+          "page": 69,
+          "score": 0.487256557
+        },
+        {
+          "id": "p070-0082",
+          "page": 70,
+          "score": 0.466117889
+        },
+        {
+          "id": "p176-0223",
+          "page": 176,
+          "score": 0.446060181
+        }
+      ],
+      "gen": {
+        "answer": "Players must wear the following compulsory equipment [p. 67]:\n\n• a shirt with sleeves\n• shorts\n• socks\n• shinguards (must be made of suitable material, appropriately sized for reasonable protection, and covered by socks)\n• footwear\n\nAdditionally, the team captain must wear an armband issued or authorised by the competition organiser, or a single-coloured armband with the word 'captain' or the letter 'C' [p. 67].\n\nNon-dangerous protective equipment such as gloves, headgear, facemasks, knee and arm protectors, goalkeepers' caps, and sports spectacles are permitted [p. 68]. Goalkeepers may also wear tracksuit bottoms [p. 68].",
+        "refused": false,
+        "cited_pages": [
+          67,
+          68
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1265,
+        "output_tokens": 172,
+        "latency_s": 1.8500505000120029,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer lists all five compulsory items (shirt with sleeves, shorts, socks, shinguards, footwear) matching the reference, and its extra details do not contradict it."
+    },
+    {
+      "id": "G18",
+      "type": "lookup",
+      "answerable": true,
+      "question": "What methods can be used to decide the winner of a drawn match?",
+      "expected_pages": [
+        103
+      ],
+      "key_phrase": "two equal periods of extra time not exceeding 15 minutes each",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.509285,
+      "retrieved": [
+        {
+          "id": "p103-0114",
+          "page": 103,
+          "score": 0.509285
+        },
+        {
+          "id": "p196-0248",
+          "page": 196,
+          "score": 0.400681525
+        },
+        {
+          "id": "p073-0086",
+          "page": 73,
+          "score": 0.394306213
+        },
+        {
+          "id": "p094-0108",
+          "page": 94,
+          "score": 0.392515212
+        },
+        {
+          "id": "p105-0116",
+          "page": 105,
+          "score": 0.387958556
+        },
+        {
+          "id": "p168-0209",
+          "page": 168,
+          "score": 0.387858391
+        },
+        {
+          "id": "p109-0122",
+          "page": 109,
+          "score": 0.387256622
+        },
+        {
+          "id": "p029-0028",
+          "page": 29,
+          "score": 0.38132
+        },
+        {
+          "id": "p203-0258",
+          "page": 203,
+          "score": 0.371934921
+        },
+        {
+          "id": "p106-0119",
+          "page": 106,
+          "score": 0.371401787
+        }
+      ],
+      "gen": {
+        "answer": "According to the Laws of the Game, when competition rules require a winning team after a drawn match, the only permitted procedures are [p. 103]:\n\n• **Away goals rule**\n• **Two equal periods of extra time** not exceeding 15 minutes each\n• **Penalties (penalty shoot-out)**\n\nA combination of these procedures may also be used together [p. 103].",
+        "refused": false,
+        "cited_pages": [
+          103
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1295,
+        "output_tokens": 87,
+        "latency_s": 1.2470172000175808,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer lists the away goals rule, two equal periods of extra time not exceeding 15 minutes each, and penalties, and says they may be combined, matching the reference."
+    },
+    {
+      "id": "G19",
+      "type": "lookup",
+      "answerable": true,
+      "question": "Where must the goalkeeper stand when a penalty kick is taken?",
+      "expected_pages": [
+        135
+      ],
+      "key_phrase": "must remain on the goal line, facing the kicker",
+      "alt_phrases": [],
+      "rank": 2,
+      "page_rank": 1,
+      "top_score": 0.661667,
+      "retrieved": [
+        {
+          "id": "p135-0167",
+          "page": 135,
+          "score": 0.661667
+        },
+        {
+          "id": "p135-0166",
+          "page": 135,
+          "score": 0.645452559
+        },
+        {
+          "id": "p221-0273",
+          "page": 221,
+          "score": 0.633434355
+        },
+        {
+          "id": "p218-0271",
+          "page": 218,
+          "score": 0.615420401
+        },
+        {
+          "id": "p105-0117",
+          "page": 105,
+          "score": 0.61188513
+        },
+        {
+          "id": "p220-0272",
+          "page": 220,
+          "score": 0.605483115
+        },
+        {
+          "id": "p214-0268",
+          "page": 214,
+          "score": 0.595296919
+        },
+        {
+          "id": "p137-0170",
+          "page": 137,
+          "score": 0.586420119
+        },
+        {
+          "id": "p217-0270",
+          "page": 217,
+          "score": 0.582986891
+        },
+        {
+          "id": "p149-0184",
+          "page": 149,
+          "score": 0.574884474
+        }
+      ],
+      "gen": {
+        "answer": "When a penalty kick is taken, the defending goalkeeper must:\n\n- **Remain on the goal line, facing the kicker, between the goalposts** [p. 135]\n- **Have at least part of one foot touching, in line with, or behind, the goal line** [p. 135]\n\nThe goalkeeper must stay in this position until the ball is kicked and must not behave in a way that unfairly distracts the kicker, such as delaying the kick or touching the goalposts, crossbar, or goal net [p. 135].",
+        "refused": false,
+        "cited_pages": [
+          135
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1130,
+        "output_tokens": 128,
+        "latency_s": 1.4900015000021085,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer states the goalkeeper must remain on the goal line between the posts facing the kicker until the ball is kicked, matching the reference; the extra detail about foot position is consistent with the Laws."
+    },
+    {
+      "id": "G20",
+      "type": "lookup",
+      "answerable": true,
+      "question": "Which kinds of decisions can the VAR assist the referee with?",
+      "expected_pages": [
+        154
+      ],
+      "key_phrase": "five categories of decisions/incidents",
+      "alt_phrases": [],
+      "rank": 5,
+      "page_rank": 5,
+      "top_score": 0.669052184,
+      "retrieved": [
+        {
+          "id": "p087-0103",
+          "page": 87,
+          "score": 0.669052184
+        },
+        {
+          "id": "p185-0236",
+          "page": 185,
+          "score": 0.657926619
+        },
+        {
+          "id": "p077-0095",
+          "page": 77,
+          "score": 0.657001555
+        },
+        {
+          "id": "p176-0222",
+          "page": 176,
+          "score": 0.65436089
+        },
+        {
+          "id": "p154-0190",
+          "page": 154,
+          "score": 0.649157643
+        },
+        {
+          "id": "p073-0086",
+          "page": 73,
+          "score": 0.641071379
+        },
+        {
+          "id": "p156-0194",
+          "page": 156,
+          "score": 0.640033782
+        },
+        {
+          "id": "p157-0195",
+          "page": 157,
+          "score": 0.633857787
+        },
+        {
+          "id": "p153-0187",
+          "page": 153,
+          "score": 0.631000578
+        },
+        {
+          "id": "p087-0104",
+          "page": 87,
+          "score": 0.629364073
+        }
+      ],
+      "gen": {
+        "answer": "The VAR can assist the referee with five categories of decisions/incidents [p. 154]:\n\n1. **Goal/no goal** [p. 77]\n2. **Penalty/no penalty** [p. 77]\n3. **Direct red card** (not including a clearly incorrect second caution) [p. 77]\n4. **Mistaken identity** when the referee cautions or sends off the wrong player of the offending team [p. 77]\n5. **Clearly incorrectly awarded corner kick** if the decision can be changed immediately and without delaying the restart (competition option) [p. 77]\n\nHowever, the VAR can only assist in these situations when there is a **'clear and obvious error' or 'serious missed incident'** [p. 77]. Additionally, if play has stopped and been restarted, the referee may only undertake a review for mistaken identity or potential sending-off offences relating to violent conduct, spitting, biting, or extremely offensive, insulting and/or abusive actions [p. 154].",
+        "refused": false,
+        "cited_pages": [
+          77,
+          154
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1401,
+        "output_tokens": 242,
+        "latency_s": 2.0017206000047736,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model lists the same five categories as the reference: goal/no goal, penalty/no penalty, red card, mistaken identity and wrongly awarded corner kick, and its additional detail does not contradict the reference."
+    },
+    {
+      "id": "G21",
+      "type": "lookup",
+      "answerable": true,
+      "question": "When is a player in an offside position?",
+      "expected_pages": [
+        109
+      ],
+      "key_phrase": "nearer to the opponents’ goal line than both the ball and the second-last opponent",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.683461249,
+      "retrieved": [
+        {
+          "id": "p109-0121",
+          "page": 109,
+          "score": 0.683461249
+        },
+        {
+          "id": "p232-0288",
+          "page": 232,
+          "score": 0.671060681
+        },
+        {
+          "id": "p234-0290",
+          "page": 234,
+          "score": 0.666811049
+        },
+        {
+          "id": "p237-0293",
+          "page": 237,
+          "score": 0.660298407
+        },
+        {
+          "id": "p231-0287",
+          "page": 231,
+          "score": 0.647001326
+        },
+        {
+          "id": "p235-0291",
+          "page": 235,
+          "score": 0.646053374
+        },
+        {
+          "id": "p090-0106",
+          "page": 90,
+          "score": 0.641842902
+        },
+        {
+          "id": "p111-0128",
+          "page": 111,
+          "score": 0.641460419
+        },
+        {
+          "id": "p236-0292",
+          "page": 236,
+          "score": 0.632454932
+        },
+        {
+          "id": "p233-0289",
+          "page": 233,
+          "score": 0.631713927
+        }
+      ],
+      "gen": {
+        "answer": "A player is in an offside position if [p. 109]:\n\n• any part of the head, body or feet is in the opponents' half (excluding the halfway line) **and**\n• any part of the head, body or feet is nearer to the opponents' goal line than both the ball and the second-last opponent\n\n**Important note:** The hands and arms are not considered when determining offside [p. 109].\n\nA player is **not** in an offside position if level with the second-last opponent or the last two opponents [p. 109].",
+        "refused": false,
+        "cited_pages": [
+          109
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1417,
+        "output_tokens": 127,
+        "latency_s": 1.688608500000555,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states both conditions (any part of head, body or feet in the opponents' half and nearer to the goal line than both the ball and the second-last opponent), and its added details about hands/arms and being level are consistent with the Laws."
+    },
+    {
+      "id": "G22",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "Do arms count when deciding if someone is offside?",
+      "expected_pages": [
+        109
+      ],
+      "key_phrase": "the hands and arms of all players, including the goalkeepers, are not considered",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.523098,
+      "retrieved": [
+        {
+          "id": "p109-0121",
+          "page": 109,
+          "score": 0.523098
+        },
+        {
+          "id": "p116-0132",
+          "page": 116,
+          "score": 0.506315231
+        },
+        {
+          "id": "p109-0122",
+          "page": 109,
+          "score": 0.472211838
+        },
+        {
+          "id": "p090-0106",
+          "page": 90,
+          "score": 0.45757392
+        },
+        {
+          "id": "p110-0123",
+          "page": 110,
+          "score": 0.456542075
+        },
+        {
+          "id": "p231-0287",
+          "page": 231,
+          "score": 0.455172539
+        },
+        {
+          "id": "p111-0126",
+          "page": 111,
+          "score": 0.452612907
+        },
+        {
+          "id": "p234-0290",
+          "page": 234,
+          "score": 0.444180518
+        },
+        {
+          "id": "p232-0288",
+          "page": 232,
+          "score": 0.442748129
+        },
+        {
+          "id": "p180-0228",
+          "page": 180,
+          "score": 0.428274184
+        }
+      ],
+      "gen": {
+        "answer": "No, arms do not count when deciding if someone is offside.\n\nThe Laws state: \"The hands and arms of all players, including the goalkeepers, are not considered\" for the purposes of determining offside [p. 109]. For offside decisions, only the head, body, or feet are considered when determining a player's position relative to the opponents' goal line and the second-last opponent.",
+        "refused": false,
+        "cited_pages": [
+          109
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1159,
+        "output_tokens": 89,
+        "latency_s": 1.1771326000161935,
+        "truncated": false
+      },
+      "verdict": "PARTIAL",
+      "verdict_reason": "The answer correctly says arms and hands are not considered, but it omits the reference's key detail that the arm's upper boundary is in line with the bottom of the armpit."
+    },
+    {
+      "id": "G23",
+      "type": "exception",
+      "answerable": true,
+      "question": "Is a player offside if they receive the ball directly from a throw-in?",
+      "expected_pages": [
+        111
+      ],
+      "key_phrase": "there is no offside offence if a player receives the ball directly from",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.624105513,
+      "retrieved": [
+        {
+          "id": "p111-0127",
+          "page": 111,
+          "score": 0.624105513
+        },
+        {
+          "id": "p141-0177",
+          "page": 141,
+          "score": 0.576825202
+        },
+        {
+          "id": "p237-0293",
+          "page": 237,
+          "score": 0.555706084
+        },
+        {
+          "id": "p110-0123",
+          "page": 110,
+          "score": 0.547944188
+        },
+        {
+          "id": "p111-0128",
+          "page": 111,
+          "score": 0.544534683
+        },
+        {
+          "id": "p109-0122",
+          "page": 109,
+          "score": 0.54201895
+        },
+        {
+          "id": "p236-0292",
+          "page": 236,
+          "score": 0.54170233
+        },
+        {
+          "id": "p141-0178",
+          "page": 141,
+          "score": 0.535281241
+        },
+        {
+          "id": "p142-0180",
+          "page": 142,
+          "score": 0.531115651
+        },
+        {
+          "id": "p112-0129",
+          "page": 112,
+          "score": 0.527930319
+        }
+      ],
+      "gen": {
+        "answer": "No, a player is not offside if they receive the ball directly from a throw-in. \n\nAccording to the Laws, \"There is no offside offence if a player receives the ball directly from: a goal kick, a throw-in, or a corner kick.\" [p. 111]",
+        "refused": false,
+        "cited_pages": [
+          111
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1227,
+        "output_tokens": 67,
+        "latency_s": 1.0278166999923997,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer says no offside offence occurs when receiving the ball directly from a throw-in, and it also lists goal kicks and corner kicks, matching the reference."
+    },
+    {
+      "id": "G24",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "Is it against the rules just to stand in an offside position?",
+      "expected_pages": [
+        109
+      ],
+      "key_phrase": "it is not an offence to be in an offside position",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.622878075,
+      "retrieved": [
+        {
+          "id": "p109-0121",
+          "page": 109,
+          "score": 0.622878075
+        },
+        {
+          "id": "p234-0290",
+          "page": 234,
+          "score": 0.589713156
+        },
+        {
+          "id": "p232-0288",
+          "page": 232,
+          "score": 0.582670271
+        },
+        {
+          "id": "p231-0287",
+          "page": 231,
+          "score": 0.578282356
+        },
+        {
+          "id": "p112-0129",
+          "page": 112,
+          "score": 0.576983511
+        },
+        {
+          "id": "p111-0126",
+          "page": 111,
+          "score": 0.575135291
+        },
+        {
+          "id": "p235-0291",
+          "page": 235,
+          "score": 0.566510201
+        },
+        {
+          "id": "p236-0292",
+          "page": 236,
+          "score": 0.566226
+        },
+        {
+          "id": "p090-0106",
+          "page": 90,
+          "score": 0.564548552
+        },
+        {
+          "id": "p237-0293",
+          "page": 237,
+          "score": 0.561963081
+        }
+      ],
+      "gen": {
+        "answer": "No, it is not against the rules just to stand in an offside position. [p. 109]\n\nThe Laws state clearly: \"It is not an offence to be in an offside position.\" A player is only penalised for offside when they become \"involved in active play\" by either playing/touching the ball or interfering with an opponent in specific ways. [p. 109]",
+        "refused": false,
+        "cited_pages": [
+          109
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1417,
+        "output_tokens": 89,
+        "latency_s": 1.3528056999784894,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer says it is not an offence to be in an offside position and that a player is penalised only when becoming involved in active play, which matches the reference."
+    },
+    {
+      "id": "G25",
+      "type": "exception",
+      "answerable": true,
+      "question": "When is a handball an offence?",
+      "expected_pages": [
+        116
+      ],
+      "key_phrase": "deliberately touches the ball with their hand/arm",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.687541962,
+      "retrieved": [
+        {
+          "id": "p116-0132",
+          "page": 116,
+          "score": 0.687541962
+        },
+        {
+          "id": "p116-0131",
+          "page": 116,
+          "score": 0.607300758
+        },
+        {
+          "id": "p122-0145",
+          "page": 122,
+          "score": 0.59303093
+        },
+        {
+          "id": "p133-0165",
+          "page": 133,
+          "score": 0.586610854
+        },
+        {
+          "id": "p145-0182",
+          "page": 145,
+          "score": 0.582271576
+        },
+        {
+          "id": "p142-0179",
+          "page": 142,
+          "score": 0.58029747
+        },
+        {
+          "id": "p124-0150",
+          "page": 124,
+          "score": 0.575065672
+        },
+        {
+          "id": "p110-0123",
+          "page": 110,
+          "score": 0.56799227
+        },
+        {
+          "id": "p149-0185",
+          "page": 149,
+          "score": 0.566988
+        },
+        {
+          "id": "p123-0149",
+          "page": 123,
+          "score": 0.564789832
+        }
+      ],
+      "gen": {
+        "answer": "According to the Laws of the Game, it is a handball offence if a player [p. 116]:\n\n• **Deliberately touches the ball with their hand/arm**, for example by moving the hand/arm towards the ball\n\n• **Touches the ball with their hand/arm when it has made their body unnaturally bigger**. A player is considered to have made their body unnaturally bigger when the position of their hand/arm is not a consequence of, or justifiable by, the player's body movement for that specific situation\n\n• **Scores in the opponents' goal**:\n  - directly from their hand/arm, even if accidental (including by the goalkeeper)\n  - immediately after the ball has touched their hand/arm, even if accidental\n\nThe key principle is that [p. 116] \"not every touch of a player's hand/arm with the ball is an offence\" — it depends on whether it was deliberate, whether the arm position was unnatural, or whether a goal resulted from the contact.",
+        "refused": false,
+        "cited_pages": [
+          116
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 981,
+        "output_tokens": 224,
+        "latency_s": 2.27878399999463,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer includes both key facts from the reference (deliberate touch, and touch when the hand/arm has made the body unnaturally bigger) and adds the correct accidental-goal scenario without contradiction."
+    },
+    {
+      "id": "G26",
+      "type": "exception",
+      "answerable": true,
+      "question": "When is a goalkeeper not allowed to handle the ball?",
+      "expected_pages": [
+        118
+      ],
+      "key_phrase": "deliberately kicked to the goalkeeper by a team-mate",
+      "alt_phrases": [],
+      "rank": 5,
+      "page_rank": 5,
+      "top_score": 0.688156188,
+      "retrieved": [
+        {
+          "id": "p116-0133",
+          "page": 116,
+          "score": 0.688156188
+        },
+        {
+          "id": "p122-0146",
+          "page": 122,
+          "score": 0.630464554
+        },
+        {
+          "id": "p119-0136",
+          "page": 119,
+          "score": 0.629011154
+        },
+        {
+          "id": "p119-0137",
+          "page": 119,
+          "score": 0.625508368
+        },
+        {
+          "id": "p118-0135",
+          "page": 118,
+          "score": 0.620702744
+        },
+        {
+          "id": "p180-0228",
+          "page": 180,
+          "score": 0.59790045
+        },
+        {
+          "id": "p122-0145",
+          "page": 122,
+          "score": 0.591258049
+        },
+        {
+          "id": "p218-0271",
+          "page": 218,
+          "score": 0.577075
+        },
+        {
+          "id": "p118-0134",
+          "page": 118,
+          "score": 0.555020332
+        },
+        {
+          "id": "p029-0028",
+          "page": 29,
+          "score": 0.5546875
+        }
+      ],
+      "gen": {
+        "answer": "Based on the excerpts, a goalkeeper is not allowed to handle the ball in these situations:\n\n1. **Outside the penalty area** - \"The goalkeeper has the same restrictions on handling the ball as any other player outside the penalty area.\" [p. 116]\n\n2. **After releasing it and before another player touches it** - An indirect free kick is awarded if the goalkeeper \"touches the ball with the hand/arm after releasing it and before it has touched another player\" [p. 118]\n\n3. **After a deliberately kicked pass from a teammate** - An indirect free kick is awarded if the goalkeeper \"touches the ball with the hand/arm...after it has been deliberately kicked to the goalkeeper by a team-mate\" [p. 118]\n\n4. **After receiving a throw-in directly from a teammate** - An indirect free kick is awarded if the goalkeeper \"touches the ball with the hand/arm...after receiving it directly from a throw-in taken by a team-mate\" [p. 118]\n\n5. **For more than eight seconds while controlling it** - A corner kick is awarded if the goalkeeper \"controls the ball with their hand(s)/arm(s) for more than eight seconds before releasing it\" [p. 119]\n\nWhen the goalkeeper handles the ball when not permitted, an indirect free kick is awarded, though disciplinary action only applies if it denies a goal or goal-scoring opportunity. [p. 116]",
+        "refused": false,
+        "cited_pages": [
+          116,
+          118,
+          119
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1151,
+        "output_tokens": 312,
+        "latency_s": 2.7149042999953963,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer covers both reference conditions (deliberate kick from a team-mate and direct throw-in from a team-mate) and its extra points are consistent with the Laws, though it omits the exception for a clear kick or attempted kick to release the ball."
+    },
+    {
+      "id": "G27",
+      "type": "lookup",
+      "answerable": true,
+      "question": "What are some offences punished with an indirect free kick?",
+      "expected_pages": [
+        118
+      ],
+      "key_phrase": "impedes the progress of an opponent without any contact being made",
+      "alt_phrases": [],
+      "rank": 3,
+      "page_rank": 3,
+      "top_score": 0.71532923,
+      "retrieved": [
+        {
+          "id": "p191-0244",
+          "page": 191,
+          "score": 0.71532923
+        },
+        {
+          "id": "p139-0176",
+          "page": 139,
+          "score": 0.712425232
+        },
+        {
+          "id": "p118-0134",
+          "page": 118,
+          "score": 0.685263634
+        },
+        {
+          "id": "p118-0135",
+          "page": 118,
+          "score": 0.627373695
+        },
+        {
+          "id": "p115-0130",
+          "page": 115,
+          "score": 0.625385344
+        },
+        {
+          "id": "p133-0165",
+          "page": 133,
+          "score": 0.609109938
+        },
+        {
+          "id": "p145-0182",
+          "page": 145,
+          "score": 0.608704567
+        },
+        {
+          "id": "p149-0185",
+          "page": 149,
+          "score": 0.607452393
+        },
+        {
+          "id": "p191-0243",
+          "page": 191,
+          "score": 0.6055336
+        },
+        {
+          "id": "p128-0158",
+          "page": 128,
+          "score": 0.602753699
+        }
+      ],
+      "gen": {
+        "answer": "# Offences Punished with an Indirect Free Kick\n\nAccording to the Laws, an indirect free kick is awarded for the following offences [p. 118]:\n\n**By a player:**\n• Playing in a dangerous manner\n• Impeding the progress of an opponent without contact\n• Dissent, using offensive, insulting or abusive language and/or actions\n• Preventing the goalkeeper from releasing the ball or kicking/attempting to kick it while the goalkeeper is releasing it\n• Initiating a deliberate trick for the ball to be passed to the goalkeeper with the head, chest, knee, etc. to circumvent the Law\n• Any other offence not mentioned in the Laws for which play is stopped to caution or send off a player\n\n**By a goalkeeper (inside their penalty area):**\n• Touching the ball with the hand/arm after releasing it and before it has touched another player\n• Touching the ball with the hand/arm after it has been deliberately kicked to them by a team-mate or received directly from a throw-in by a team-mate (unless they have clearly kicked or attempted to kick it to release it into play) [p. 118]",
+        "refused": false,
+        "cited_pages": [
+          118
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1185,
+        "output_tokens": 258,
+        "latency_s": 2.4545493999903556,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer lists playing in a dangerous manner, impeding an opponent without contact, and dissent/offensive language, matching the reference, and its additional offences are accurate under the Laws."
+    },
+    {
+      "id": "G28",
+      "type": "lookup",
+      "answerable": true,
+      "question": "What counts as a caution for unsporting behaviour, for example?",
+      "expected_pages": [
+        122
+      ],
+      "key_phrase": "feigning injury or pretending to have been fouled",
+      "alt_phrases": [],
+      "rank": 3,
+      "page_rank": 1,
+      "top_score": 0.643881857,
+      "retrieved": [
+        {
+          "id": "p122-0144",
+          "page": 122,
+          "score": 0.643881857
+        },
+        {
+          "id": "p126-0155",
+          "page": 126,
+          "score": 0.582910538
+        },
+        {
+          "id": "p122-0145",
+          "page": 122,
+          "score": 0.552972794
+        },
+        {
+          "id": "p125-0153",
+          "page": 125,
+          "score": 0.551424
+        },
+        {
+          "id": "p121-0143",
+          "page": 121,
+          "score": 0.548639834
+        },
+        {
+          "id": "p197-0249",
+          "page": 197,
+          "score": 0.537829459
+        },
+        {
+          "id": "p180-0227",
+          "page": 180,
+          "score": 0.521154463
+        },
+        {
+          "id": "p121-0142",
+          "page": 121,
+          "score": 0.510828
+        },
+        {
+          "id": "p053-0057",
+          "page": 53,
+          "score": 0.49455452
+        },
+        {
+          "id": "p204-0259",
+          "page": 204,
+          "score": 0.491939545
+        }
+      ],
+      "gen": {
+        "answer": "According to the Laws of the Game, a player must be cautioned for unsporting behaviour in several circumstances, including if a player: [p. 122]\n\n• Attempts to deceive the referee, e.g. by feigning injury or pretending to have been fouled (simulation)\n• Changes places with the goalkeeper during play or without the referee's permission\n• Commits in a reckless manner a direct free kick offence\n• Handles the ball to interfere with or stop a promising attack (except in certain penalty kick situations)\n• Denies an opponent an obvious goal-scoring opportunity by committing an offence which was an attempt to play the ball or a challenge for the ball and the referee awards a penalty kick\n• Handles the ball in an attempt to score a goal [p. 122]\n\nAdditionally, caution offences include clearly or persistently not respecting the confines of the technical area, delaying the restart of play, deliberately entering the opposing team's technical area, dissent by word or action, throwing/kicking drinks bottles or other objects, and actions showing a clear lack of respect for match officials. [p. 125]",
+        "refused": false,
+        "cited_pages": [
+          122,
+          125
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 979,
+        "output_tokens": 252,
+        "latency_s": 2.4392786000098567,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer includes the reference example of attempting to deceive the referee by feigning injury or pretending to have been fouled (simulation), and its additional examples do not contradict the reference."
+    },
+    {
+      "id": "G29",
+      "type": "exception",
+      "answerable": true,
+      "question": "When must a player be sent off for a handball offence?",
+      "expected_pages": [
+        123,
+        124
+      ],
+      "key_phrase": "by committing a deliberate handball offence",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.685930312,
+      "retrieved": [
+        {
+          "id": "p124-0150",
+          "page": 124,
+          "score": 0.685930312
+        },
+        {
+          "id": "p123-0149",
+          "page": 123,
+          "score": 0.677479804
+        },
+        {
+          "id": "p116-0132",
+          "page": 116,
+          "score": 0.645249367
+        },
+        {
+          "id": "p120-0140",
+          "page": 120,
+          "score": 0.623861313
+        },
+        {
+          "id": "p133-0165",
+          "page": 133,
+          "score": 0.621387541
+        },
+        {
+          "id": "p115-0130",
+          "page": 115,
+          "score": 0.620150626
+        },
+        {
+          "id": "p124-0151",
+          "page": 124,
+          "score": 0.614873946
+        },
+        {
+          "id": "p122-0145",
+          "page": 122,
+          "score": 0.614618301
+        },
+        {
+          "id": "p142-0179",
+          "page": 142,
+          "score": 0.612275124
+        },
+        {
+          "id": "p121-0141",
+          "page": 121,
+          "score": 0.607272208
+        }
+      ],
+      "gen": {
+        "answer": "Based on the Laws of the Game, a player must be sent off for a handball offence in these circumstances [p. 123]:\n\n1. **Deliberate handball denying a goal or obvious goal-scoring opportunity** – anywhere on the field (except a goalkeeper within their own penalty area) [p. 123]\n\n2. **Non-deliberate handball denying a goal or obvious goal-scoring opportunity** – when it occurs outside their own penalty area [p. 123]\n\nAdditionally, there is a specific rule about DOGSO (Denying a Goal or Obvious Goal-Scoring Opportunity): where a player denies an obvious goal-scoring opportunity by committing a deliberate handball offence, the player is sent off wherever the offence occurs, except a goalkeeper within their own penalty area [p. 124].\n\nFor non-deliberate handball offences within the penalty area that result in a penalty kick, the player is cautioned rather than sent off [p. 124].",
+        "refused": false,
+        "cited_pages": [
+          123,
+          124
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1088,
+        "output_tokens": 215,
+        "latency_s": 2.2869920000084676,
+        "truncated": false
+      },
+      "verdict": "INCORRECT",
+      "verdict_reason": "The model answer adds a claim that contradicts the Laws and the reference: that a non-deliberate handball denying a goal or opportunity is a sending-off offence outside the penalty area, and that a non-deliberate handball in the penalty area leads to a caution, whereas the reference limits sending-off to deliberate handball."
+    },
+    {
+      "id": "G30",
+      "type": "exception",
+      "answerable": true,
+      "question": "If the referee plays advantage for an offence that deserves a card, when is the card shown?",
+      "expected_pages": [
+        120
+      ],
+      "key_phrase": "must be issued when the ball is next out of play",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.557870924,
+      "retrieved": [
+        {
+          "id": "p120-0139",
+          "page": 120,
+          "score": 0.557870924
+        },
+        {
+          "id": "p230-0286",
+          "page": 230,
+          "score": 0.55111891
+        },
+        {
+          "id": "p120-0140",
+          "page": 120,
+          "score": 0.54577738
+        },
+        {
+          "id": "p120-0138",
+          "page": 120,
+          "score": 0.516453803
+        },
+        {
+          "id": "p180-0227",
+          "page": 180,
+          "score": 0.514259398
+        },
+        {
+          "id": "p155-0192",
+          "page": 155,
+          "score": 0.511118948
+        },
+        {
+          "id": "p153-0188",
+          "page": 153,
+          "score": 0.507845938
+        },
+        {
+          "id": "p077-0096",
+          "page": 77,
+          "score": 0.507013381
+        },
+        {
+          "id": "p075-0091",
+          "page": 75,
+          "score": 0.502574
+        },
+        {
+          "id": "p169-0211",
+          "page": 169,
+          "score": 0.501543105
+        }
+      ],
+      "gen": {
+        "answer": "If the referee plays advantage for an offence that warrants a caution or sending-off, the card is shown **when the ball is next out of play** [p. 120].\n\nHowever, there are important exceptions:\n\n- **For a DOGSO (denying an obvious goal-scoring opportunity) offence**: If a goal is scored by the non-offending team as a result of the advantage being played, there is no disciplinary sanction at all [p. 120].\n\n- **For interfering with or stopping a promising attack**: The player is not cautioned [p. 120].",
+        "refused": false,
+        "cited_pages": [
+          120
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1366,
+        "output_tokens": 133,
+        "latency_s": 1.6355969000142068,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model states the card is shown when the ball is next out of play, matching the reference, and its added exceptions are consistent with the Laws."
+    },
+    {
+      "id": "G31",
+      "type": "exception",
+      "answerable": true,
+      "question": "Can a goal be scored directly from a goal kick?",
+      "expected_pages": [
+        145
+      ],
+      "key_phrase": "a goal may be scored directly from a goal kick, but only against the opposing team",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.605894148,
+      "retrieved": [
+        {
+          "id": "p145-0181",
+          "page": 145,
+          "score": 0.605894148
+        },
+        {
+          "id": "p137-0171",
+          "page": 137,
+          "score": 0.594055295
+        },
+        {
+          "id": "p145-0182",
+          "page": 145,
+          "score": 0.593782485
+        },
+        {
+          "id": "p131-0161",
+          "page": 131,
+          "score": 0.593191206
+        },
+        {
+          "id": "p098-0111",
+          "page": 98,
+          "score": 0.574184537
+        },
+        {
+          "id": "p149-0184",
+          "page": 149,
+          "score": 0.547670424
+        },
+        {
+          "id": "p137-0170",
+          "page": 137,
+          "score": 0.546842158
+        },
+        {
+          "id": "p146-0183",
+          "page": 146,
+          "score": 0.541041434
+        },
+        {
+          "id": "p135-0166",
+          "page": 135,
+          "score": 0.537798524
+        },
+        {
+          "id": "p149-0185",
+          "page": 149,
+          "score": 0.537672102
+        }
+      ],
+      "gen": {
+        "answer": "Yes, a goal may be scored directly from a goal kick, but only against the opposing team. If the ball directly enters the kicker's own goal from a goal kick, a corner kick is awarded to the opponents instead [p. 145].",
+        "refused": false,
+        "cited_pages": [
+          145
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1043,
+        "output_tokens": 54,
+        "latency_s": 0.876536900002975,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer states that a goal can be scored directly from a goal kick against the opposing team only, and that a corner kick is awarded if the ball enters the kicker's own goal, matching the reference."
+    },
+    {
+      "id": "G32",
+      "type": "exception",
+      "answerable": true,
+      "question": "What is awarded if a corner kick goes directly into the kicker's own goal?",
+      "expected_pages": [
+        149
+      ],
+      "key_phrase": "a goal may be scored directly from a corner kick",
+      "alt_phrases": [],
+      "rank": 6,
+      "page_rank": 2,
+      "top_score": 0.650655806,
+      "retrieved": [
+        {
+          "id": "p150-0186",
+          "page": 150,
+          "score": 0.650655806
+        },
+        {
+          "id": "p149-0185",
+          "page": 149,
+          "score": 0.623457968
+        },
+        {
+          "id": "p131-0161",
+          "page": 131,
+          "score": 0.622416556
+        },
+        {
+          "id": "p098-0111",
+          "page": 98,
+          "score": 0.610866666
+        },
+        {
+          "id": "p145-0181",
+          "page": 145,
+          "score": 0.60742861
+        },
+        {
+          "id": "p149-0184",
+          "page": 149,
+          "score": 0.602414191
+        },
+        {
+          "id": "p145-0182",
+          "page": 145,
+          "score": 0.600539267
+        },
+        {
+          "id": "p137-0170",
+          "page": 137,
+          "score": 0.585832655
+        },
+        {
+          "id": "p139-0175",
+          "page": 139,
+          "score": 0.583228171
+        },
+        {
+          "id": "p133-0165",
+          "page": 133,
+          "score": 0.58248055
+        }
+      ],
+      "gen": {
+        "answer": "If a corner kick goes directly into the kicker's own goal, a goal kick is awarded to the opponents [p. 150].",
+        "refused": false,
+        "cited_pages": [
+          150
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1077,
+        "output_tokens": 31,
+        "latency_s": 0.7247017000045162,
+        "truncated": false
+      },
+      "verdict": "INCORRECT",
+      "verdict_reason": "The reference says a corner kick is awarded to the opponents, but the model answer says a goal kick, which contradicts it."
+    },
+    {
+      "id": "G33",
+      "type": "lookup",
+      "answerable": true,
+      "question": "When must referees caution a player for delaying a restart?",
+      "expected_pages": [
+        123,
+        181
+      ],
+      "key_phrase": "referees must caution players who excessively delay the restart of play",
+      "alt_phrases": [],
+      "rank": 4,
+      "page_rank": 4,
+      "top_score": 0.599531174,
+      "retrieved": [
+        {
+          "id": "p026-0023",
+          "page": 26,
+          "score": 0.599531174
+        },
+        {
+          "id": "p238-0295",
+          "page": 238,
+          "score": 0.598014832
+        },
+        {
+          "id": "p189-0241",
+          "page": 189,
+          "score": 0.57197
+        },
+        {
+          "id": "p123-0148",
+          "page": 123,
+          "score": 0.567106307
+        },
+        {
+          "id": "p181-0229",
+          "page": 181,
+          "score": 0.560570717
+        },
+        {
+          "id": "p239-0296",
+          "page": 239,
+          "score": 0.556542337
+        },
+        {
+          "id": "p121-0142",
+          "page": 121,
+          "score": 0.554083824
+        },
+        {
+          "id": "p027-0024",
+          "page": 27,
+          "score": 0.550412655
+        },
+        {
+          "id": "p230-0286",
+          "page": 230,
+          "score": 0.510295928
+        },
+        {
+          "id": "p142-0179",
+          "page": 142,
+          "score": 0.509381294
+        }
+      ],
+      "gen": {
+        "answer": "According to the Laws, referees must caution players who excessively delay the restart of play in the following situations [p. 123, 181]:\n\n• Appearing to take a throw-in but suddenly leaving it to a team-mate to take\n• Delaying leaving the field of play when being substituted\n• Excessively delaying a restart\n• Kicking or carrying the ball away, or provoking a confrontation by deliberately touching the ball after the referee has stopped play\n• Taking a free kick from the wrong position to force a retake\n\nHowever, there is an important exception: when a referee has already punished a team for delaying a throw-in (by awarding it to the opposing team) or for delaying a goal kick (by awarding a corner kick to the opposing team), a caution applies only if the player or team-mate then excessively delays the restart by the opposing team. This is because the restart award itself is considered sufficient punishment unless the delay is extreme [p. 26, 181].",
+        "refused": false,
+        "cited_pages": [
+          26,
+          123,
+          181
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1382,
+        "output_tokens": 228,
+        "latency_s": 2.2712775000254624,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states that referees must caution players who excessively delay the restart of play, matching the reference, and its added examples are consistent with the Laws and do not contradict it."
+    },
+    {
+      "id": "G34",
+      "type": "lookup",
+      "answerable": true,
+      "question": "Who gets a dropped ball when play stopped inside the penalty area?",
+      "expected_pages": [
+        98
+      ],
+      "key_phrase": "the referee drops it for the defending team goalkeeper",
+      "alt_phrases": [],
+      "rank": 5,
+      "page_rank": 2,
+      "top_score": 0.716468811,
+      "retrieved": [
+        {
+          "id": "p178-0225",
+          "page": 178,
+          "score": 0.716468811
+        },
+        {
+          "id": "p098-0112",
+          "page": 98,
+          "score": 0.688794136
+        },
+        {
+          "id": "p064-0072",
+          "page": 64,
+          "score": 0.641070426
+        },
+        {
+          "id": "p138-0174",
+          "page": 138,
+          "score": 0.640613556
+        },
+        {
+          "id": "p098-0111",
+          "page": 98,
+          "score": 0.634200156
+        },
+        {
+          "id": "p101-0113",
+          "page": 101,
+          "score": 0.621622086
+        },
+        {
+          "id": "p127-0157",
+          "page": 127,
+          "score": 0.600799561
+        },
+        {
+          "id": "p097-0109",
+          "page": 97,
+          "score": 0.565944672
+        },
+        {
+          "id": "p056-0060",
+          "page": 56,
+          "score": 0.565926552
+        },
+        {
+          "id": "p128-0159",
+          "page": 128,
+          "score": 0.563091218
+        }
+      ],
+      "gen": {
+        "answer": "When play is stopped inside the penalty area, the referee drops the ball for the defending team's goalkeeper in their penalty area [p. 98].",
+        "refused": false,
+        "cited_pages": [
+          98
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1241,
+        "output_tokens": 33,
+        "latency_s": 0.6967526999942493,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer states the ball is dropped for the defending team's goalkeeper in their penalty area, matching the reference."
+    },
+    {
+      "id": "N01",
+      "type": "new_2026_27",
+      "answerable": true,
+      "question": "What is the time limit for a player to leave the field when being substituted?",
+      "expected_pages": [
+        22,
+        23,
+        61,
+        63,
+        167,
+        171,
+        172
+      ],
+      "key_phrase": "ten-second time limit for players to leave the field of play",
+      "alt_phrases": [
+        "within ten seconds"
+      ],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.74474144,
+      "retrieved": [
+        {
+          "id": "p171-0214",
+          "page": 171,
+          "score": 0.74474144
+        },
+        {
+          "id": "p172-0216",
+          "page": 172,
+          "score": 0.712783813
+        },
+        {
+          "id": "p022-0014",
+          "page": 22,
+          "score": 0.711841583
+        },
+        {
+          "id": "p172-0215",
+          "page": 172,
+          "score": 0.711198807
+        },
+        {
+          "id": "p023-0016",
+          "page": 23,
+          "score": 0.698875487
+        },
+        {
+          "id": "p022-0015",
+          "page": 22,
+          "score": 0.692988455
+        },
+        {
+          "id": "p171-0213",
+          "page": 171,
+          "score": 0.685534477
+        },
+        {
+          "id": "p061-0066",
+          "page": 61,
+          "score": 0.681376517
+        },
+        {
+          "id": "p061-0067",
+          "page": 61,
+          "score": 0.669181824
+        },
+        {
+          "id": "p063-0070",
+          "page": 63,
+          "score": 0.660277426
+        }
+      ],
+      "gen": {
+        "answer": "The time limit for a player to leave the field when being substituted is **ten seconds** [p. 171, 22].\n\nThis time begins once the substitution board has been shown or, where there is no substitution board, the referee signals for the substitution to take place [p. 22]. The player must leave at the nearest point on the boundary line, unless indicated otherwise by the referee [p. 22].",
+        "refused": false,
+        "cited_pages": [
+          22,
+          171
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 948,
+        "output_tokens": 94,
+        "latency_s": 1.2869623000151478,
+        "truncated": false
+      },
+      "verdict": "PARTIAL",
+      "verdict_reason": "The model answer correctly states ten seconds but omits the key consequence that the substitute cannot enter until the first stoppage after one minute has elapsed if the limit is exceeded."
+    },
+    {
+      "id": "N02",
+      "type": "new_2026_27",
+      "answerable": true,
+      "question": "How long must a player who received treatment on the field stay off after play restarts?",
+      "expected_pages": [
+        24,
+        25,
+        75,
+        167,
+        175
+      ],
+      "key_phrase": "remain off the field of play for one minute after play has restarted",
+      "alt_phrases": [
+        "remain off the field of play for one minute",
+        "leave the field of play for one minute",
+        "re-enter one minute after play has restarted"
+      ],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.672393799,
+      "retrieved": [
+        {
+          "id": "p175-0221",
+          "page": 175,
+          "score": 0.672393799
+        },
+        {
+          "id": "p024-0019",
+          "page": 24,
+          "score": 0.649334908
+        },
+        {
+          "id": "p075-0092",
+          "page": 75,
+          "score": 0.637099326
+        },
+        {
+          "id": "p024-0018",
+          "page": 24,
+          "score": 0.636638701
+        },
+        {
+          "id": "p175-0220",
+          "page": 175,
+          "score": 0.615724564
+        },
+        {
+          "id": "p076-0093",
+          "page": 76,
+          "score": 0.612927377
+        },
+        {
+          "id": "p239-0296",
+          "page": 239,
+          "score": 0.612349451
+        },
+        {
+          "id": "p025-0020",
+          "page": 25,
+          "score": 0.609020233
+        },
+        {
+          "id": "p238-0295",
+          "page": 238,
+          "score": 0.59597683
+        },
+        {
+          "id": "p238-0294",
+          "page": 238,
+          "score": 0.591243804
+        }
+      ],
+      "gen": {
+        "answer": "A player who received treatment on the field must remain off the field of play for **one minute (running clock) after play has restarted** [p. 24, 75].\n\nThe referee may give permission for the player to return while the ball is in play [p. 175].",
+        "refused": false,
+        "cited_pages": [
+          24,
+          75,
+          175
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1331,
+        "output_tokens": 65,
+        "latency_s": 1.0949874999932945,
+        "truncated": false
+      },
+      "verdict": "PARTIAL",
+      "verdict_reason": "The one-minute figure matches the reference, but the added claim that the referee may let the player return while the ball is in play is doubtful, and the answer does not clearly state the actual exceptions."
+    },
+    {
+      "id": "N03",
+      "type": "new_2026_27",
+      "answerable": true,
+      "question": "Is the penalty taker still automatically cautioned if the goalkeeper and kicker offend at the same time?",
+      "expected_pages": [
+        168
+      ],
+      "key_phrase": "removal of the automatic caution (yc) for the kicker",
+      "alt_phrases": [],
+      "rank": 3,
+      "page_rank": 3,
+      "top_score": 0.636399209,
+      "retrieved": [
+        {
+          "id": "p182-0231",
+          "page": 182,
+          "score": 0.636399209
+        },
+        {
+          "id": "p179-0226",
+          "page": 179,
+          "score": 0.617695868
+        },
+        {
+          "id": "p168-0210",
+          "page": 168,
+          "score": 0.609943449
+        },
+        {
+          "id": "p106-0118",
+          "page": 106,
+          "score": 0.593618453
+        },
+        {
+          "id": "p191-0243",
+          "page": 191,
+          "score": 0.587930679
+        },
+        {
+          "id": "p139-0175",
+          "page": 139,
+          "score": 0.58667469
+        },
+        {
+          "id": "p137-0172",
+          "page": 137,
+          "score": 0.57174778
+        },
+        {
+          "id": "p136-0169",
+          "page": 136,
+          "score": 0.57053858
+        },
+        {
+          "id": "p137-0170",
+          "page": 137,
+          "score": 0.557423115
+        },
+        {
+          "id": "p136-0168",
+          "page": 136,
+          "score": 0.535461485
+        }
+      ],
+      "gen": {
+        "answer": "No, the penalty taker is not automatically cautioned if the goalkeeper and kicker offend at the same time. This requirement was removed.\n\nAccording to the amendments: \"Removal of the automatic caution (YC) for the kicker if they and the goalkeeper offend at the same time\" [p. 168]\n\nDuring a regular match, if both the goalkeeper and kicker commit an offence simultaneously, \"the kicker is cautioned and play restarts with an indirect free kick to the defending team\" [p. 182]. However, this caution is not automatic in the sense that it was previously applied; rather it is now a consequence of the specific offence committed.\n\nDuring a penalty shoot-out, \"If both the goalkeeper and the kicker commit an offence at the same time, the kick is recorded as missed and the kicker is cautioned\" [p. 179].",
+        "refused": false,
+        "cited_pages": [
+          168,
+          179,
+          182
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1613,
+        "output_tokens": 194,
+        "latency_s": 2.386135299981106,
+        "truncated": false
+      },
+      "verdict": "INCORRECT",
+      "verdict_reason": "The model opens with 'No' and says the requirement was removed, but then states the kicker is still cautioned in regular play and in shoot-outs, which contradicts the reference that the automatic caution was removed."
+    },
+    {
+      "id": "N04",
+      "type": "new_2026_27",
+      "answerable": true,
+      "question": "Is a yellow card still given for denying an obvious goal-scoring opportunity if advantage is played and a goal is scored?",
+      "expected_pages": [
+        120,
+        168,
+        180
+      ],
+      "key_phrase": "no caution (yc) for a dogso offence if the advantage is played and a goal is scored",
+      "alt_phrases": [
+        "in which case there is no disciplinary sanction"
+      ],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.517848969,
+      "retrieved": [
+        {
+          "id": "p120-0139",
+          "page": 120,
+          "score": 0.517848969
+        },
+        {
+          "id": "p120-0140",
+          "page": 120,
+          "score": 0.50725174
+        },
+        {
+          "id": "p180-0227",
+          "page": 180,
+          "score": 0.49045375
+        },
+        {
+          "id": "p180-0228",
+          "page": 180,
+          "score": 0.468544036
+        },
+        {
+          "id": "p230-0286",
+          "page": 230,
+          "score": 0.455656081
+        },
+        {
+          "id": "p159-0200",
+          "page": 159,
+          "score": 0.451993972
+        },
+        {
+          "id": "p124-0150",
+          "page": 124,
+          "score": 0.445338279
+        },
+        {
+          "id": "p168-0210",
+          "page": 168,
+          "score": 0.430522
+        },
+        {
+          "id": "p181-0229",
+          "page": 181,
+          "score": 0.429308891
+        },
+        {
+          "id": "p174-0219",
+          "page": 174,
+          "score": 0.425186217
+        }
+      ],
+      "gen": {
+        "answer": "No. If the referee plays advantage following a denying an obvious goal-scoring opportunity (DOGSO) offence and a goal is scored by the attacking team as a result, the player who committed the offence is not cautioned or sent off [p. 120, 180].\n\nThe rule states: \"except where a goal is scored by the non-offending team as a result of the advantage having been played, in which case there is no disciplinary sanction\" [p. 120].",
+        "refused": false,
+        "cited_pages": [
+          120,
+          180
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1243,
+        "output_tokens": 109,
+        "latency_s": 1.2722399999911431,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer says no caution is given when advantage is played and a goal is scored, which matches the reference, and the added detail about no sending-off or other sanction does not contradict it."
+    },
+    {
+      "id": "N05",
+      "type": "new_2026_27",
+      "answerable": true,
+      "question": "How many substitutes are allowed in senior international friendlies?",
+      "expected_pages": [
+        167
+      ],
+      "key_phrase": "increased to eight, or to eleven if both teams agree",
+      "alt_phrases": [],
+      "rank": 3,
+      "page_rank": 3,
+      "top_score": 0.663506567,
+      "retrieved": [
+        {
+          "id": "p170-0212",
+          "page": 170,
+          "score": 0.663506567
+        },
+        {
+          "id": "p060-0063",
+          "page": 60,
+          "score": 0.618478835
+        },
+        {
+          "id": "p167-0207",
+          "page": 167,
+          "score": 0.617726386
+        },
+        {
+          "id": "p060-0064",
+          "page": 60,
+          "score": 0.600400031
+        },
+        {
+          "id": "p059-0062",
+          "page": 59,
+          "score": 0.592527449
+        },
+        {
+          "id": "p020-0011",
+          "page": 20,
+          "score": 0.573406279
+        },
+        {
+          "id": "p040-0042",
+          "page": 40,
+          "score": 0.543171942
+        },
+        {
+          "id": "p039-0040",
+          "page": 39,
+          "score": 0.527881682
+        },
+        {
+          "id": "p061-0065",
+          "page": 61,
+          "score": 0.521292746
+        },
+        {
+          "id": "p059-0061",
+          "page": 59,
+          "score": 0.518764496
+        }
+      ],
+      "gen": {
+        "answer": "In senior 'A' international team friendly matches, a maximum of **eight substitutes** may be used [p. 60]. \n\nHowever, if both teams agree and inform the referee in advance, they may use up to a maximum of **eleven substitutes** [p. 60]. In either case, each team will be restricted to three substitution opportunities [p. 167].",
+        "refused": false,
+        "cited_pages": [
+          60,
+          167
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1385,
+        "output_tokens": 85,
+        "latency_s": 1.083643599995412,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer states eight substitutes, up to eleven if both teams agree and inform the referee in advance, and the three substitution opportunities limit, matching the reference."
+    },
+    {
+      "id": "M01",
+      "type": "multi_rule",
+      "answerable": true,
+      "question": "A goalkeeper holds the ball too long inside their area. What is awarded and can opponents challenge them meanwhile?",
+      "expected_pages": [
+        119
+      ],
+      "key_phrase": "cannot be challenged by an opponent when in control of the ball",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.679170668,
+      "retrieved": [
+        {
+          "id": "p119-0137",
+          "page": 119,
+          "score": 0.679170668
+        },
+        {
+          "id": "p119-0136",
+          "page": 119,
+          "score": 0.658839226
+        },
+        {
+          "id": "p116-0133",
+          "page": 116,
+          "score": 0.644977629
+        },
+        {
+          "id": "p184-0235",
+          "page": 184,
+          "score": 0.640303612
+        },
+        {
+          "id": "p142-0179",
+          "page": 142,
+          "score": 0.622468
+        },
+        {
+          "id": "p122-0146",
+          "page": 122,
+          "score": 0.612553596
+        },
+        {
+          "id": "p118-0135",
+          "page": 118,
+          "score": 0.606067657
+        },
+        {
+          "id": "p121-0142",
+          "page": 121,
+          "score": 0.604747772
+        },
+        {
+          "id": "p011-0002",
+          "page": 11,
+          "score": 0.600608826
+        },
+        {
+          "id": "p137-0172",
+          "page": 137,
+          "score": 0.599133492
+        }
+      ],
+      "gen": {
+        "answer": "Based on the excerpts provided:\n\n**What is awarded:** A corner kick is awarded if a goalkeeper controls the ball with their hand(s)/arm(s) for more than eight seconds before releasing it [p. 119, 184].\n\n**Can opponents challenge them:** No. A goalkeeper cannot be challenged by an opponent when in control of the ball with their hand(s)/arm(s) [p. 119].\n\nThe referee decides when the goalkeeper has control and begins the eight-second count, visually counting down the last five seconds with a raised hand [p. 119].",
+        "refused": false,
+        "cited_pages": [
+          119,
+          184
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 1270,
+        "output_tokens": 128,
+        "latency_s": 1.6723321999888867,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The answer states that a corner kick is awarded for holding the ball more than eight seconds and that opponents cannot challenge a goalkeeper in control, matching the reference."
+    },
+    {
+      "id": "M02",
+      "type": "multi_rule",
+      "answerable": true,
+      "question": "One team has only six players because a player deliberately left the field. Does the referee have to stop play?",
+      "expected_pages": [
+        59
+      ],
+      "key_phrase": "the referee is not obliged to stop play and the advantage may be played",
+      "alt_phrases": [],
+      "rank": 1,
+      "page_rank": 1,
+      "top_score": 0.571590364,
+      "retrieved": [
+        {
+          "id": "p059-0061",
+          "page": 59,
+          "score": 0.571590364
+        },
+        {
+          "id": "p065-0075",
+          "page": 65,
+          "score": 0.570063591
+        },
+        {
+          "id": "p107-0120",
+          "page": 107,
+          "score": 0.569450438
+        },
+        {
+          "id": "p064-0072",
+          "page": 64,
+          "score": 0.562056601
+        },
+        {
+          "id": "p172-0216",
+          "page": 172,
+          "score": 0.557930946
+        },
+        {
+          "id": "p121-0141",
+          "page": 121,
+          "score": 0.557543814
+        },
+        {
+          "id": "p076-0093",
+          "page": 76,
+          "score": 0.552729547
+        },
+        {
+          "id": "p064-0073",
+          "page": 64,
+          "score": 0.550145149
+        },
+        {
+          "id": "p063-0070",
+          "page": 63,
+          "score": 0.54487139
+        },
+        {
+          "id": "p082-0099",
+          "page": 82,
+          "score": 0.542318344
+        }
+      ],
+      "gen": {
+        "answer": "No, the referee is not obliged to stop play in this situation. According to the Laws:\n\n\"If a team has fewer than seven players because one or more players has deliberately left the field of play, the referee is not obliged to stop play and the advantage may be played, but the match must not resume after the ball has gone out of play if a team does not have the minimum number of seven players.\" [p. 59]\n\nHowever, once the ball goes out of play, the match cannot resume with fewer than seven players.",
+        "refused": false,
+        "cited_pages": [
+          59
+        ],
+        "unsupported_citations": [],
+        "input_tokens": 967,
+        "output_tokens": 116,
+        "latency_s": 1.4123707999824546,
+        "truncated": false
+      },
+      "verdict": "CORRECT",
+      "verdict_reason": "The model answer says the referee need not stop play, advantage may be played, and the match cannot resume after the ball goes out of play with fewer than seven players, which matches the reference."
+    },
+    {
+      "id": "U01",
+      "type": "unanswerable",
+      "answerable": false,
+      "question": "Who won the 2018 FIFA World Cup?",
+      "expected_pages": [],
+      "key_phrase": "",
+      "alt_phrases": [],
+      "rank": null,
+      "page_rank": null,
+      "top_score": 0.309134513,
+      "retrieved": [
+        {
+          "id": "p011-0000",
+          "page": 11,
+          "score": 0.309134513
+        },
+        {
+          "id": "p020-0010",
+          "page": 20,
+          "score": 0.283969909
+        },
+        {
+          "id": "p195-0247",
+          "page": 195,
+          "score": 0.279589683
+        },
+        {
+          "id": "p018-0009",
+          "page": 18,
+          "score": 0.27524665
+        },
+        {
+          "id": "p168-0209",
+          "page": 168,
+          "score": 0.274521858
+        },
+        {
+          "id": "p164-0206",
+          "page": 164,
+          "score": 0.272421867
+        },
+        {
+          "id": "p055-0059",
+          "page": 55,
+          "score": 0.272341758
+        },
+        {
+          "id": "p103-0114",
+          "page": 103,
+          "score": 0.270848304
+        },
+        {
+          "id": "p017-0007",
+          "page": 17,
+          "score": 0.269644767
+        },
+        {
+          "id": "p069-0081",
+          "page": 69,
+          "score": 0.269511253
+        }
+      ],
+      "gen": {
+        "answer": "I can't find this in the provided Laws of the Game.\n\nThis question asks about a historical FIFA World Cup result, which is not covered in the excerpts provided. The Laws of the Game are reference documents about the rules of football, not match results or tournament outcomes.",
+        "refused": true,
+        "cited_pages": [],
+        "unsupported_citations": [],
+        "input_tokens": 1227,
+        "output_tokens": 59,
+        "latency_s": 1.198685999988811,
+        "truncated": false
+      },
+      "verdict": "CORRECT_REFUSAL",
+      "verdict_reason": ""
+    },
+    {
+      "id": "U02",
+      "type": "unanswerable",
+      "answerable": false,
+      "question": "How much are referees paid per match?",
+      "expected_pages": [],
+      "key_phrase": "",
+      "alt_phrases": [],
+      "rank": null,
+      "page_rank": null,
+      "top_score": 0.487334251,
+      "retrieved": [
+        {
+          "id": "p206-0261",
+          "page": 206,
+          "score": 0.487334251
+        },
+        {
+          "id": "p085-0100",
+          "page": 85,
+          "score": 0.479945242
+        },
+        {
+          "id": "p077-0096",
+          "page": 77,
+          "score": 0.448523551
+        },
+        {
+          "id": "p081-0098",
+          "page": 81,
+          "score": 0.447727233
+        },
+        {
+          "id": "p085-0101",
+          "page": 85,
+          "score": 0.446857482
+        },
+        {
+          "id": "p073-0086",
+          "page": 73,
+          "score": 0.439224273
+        },
+        {
+          "id": "p087-0103",
+          "page": 87,
+          "score": 0.435337067
+        },
+        {
+          "id": "p074-0089",
+          "page": 74,
+          "score": 0.433515579
+        },
+        {
+          "id": "p075-0091",
+          "page": 75,
+          "score": 0.431594849
+        },
+        {
+          "id": "p207-0262",
+          "page": 207,
+          "score": 0.430053741
+        }
+      ],
+      "gen": {
+        "answer": "I can't find this in the provided Laws of the Game.\n\nThe excerpts provided cover the roles and responsibilities of match officials, their equipment, and their liability, but do not contain information about referee compensation or payment.",
+        "refused": true,
+        "cited_pages": [],
+        "unsupported_citations": [],
+        "input_tokens": 1334,
+        "output_tokens": 48,
+        "latency_s": 0.9868922999885399,
+        "truncated": false
+      },
+      "verdict": "CORRECT_REFUSAL",
+      "verdict_reason": ""
+    },
+    {
+      "id": "U03",
+      "type": "unanswerable",
+      "answerable": false,
+      "question": "What is the maximum transfer fee a club can pay for a player?",
+      "expected_pages": [],
+      "key_phrase": "",
+      "alt_phrases": [],
+      "rank": null,
+      "page_rank": null,
+      "top_score": 0.377907783,
+      "retrieved": [
+        {
+          "id": "p059-0062",
+          "page": 59,
+          "score": 0.377907783
+        },
+        {
+          "id": "p060-0064",
+          "page": 60,
+          "score": 0.360737801
+        },
+        {
+          "id": "p020-0011",
+          "page": 20,
+          "score": 0.341621399
+        },
+        {
+          "id": "p170-0212",
+          "page": 170,
+          "score": 0.33825019
+        },
+        {
+          "id": "p059-0061",
+          "page": 59,
+          "score": 0.328895539
+        },
+        {
+          "id": "p039-0040",
+          "page": 39,
+          "score": 0.327649117
+        },
+        {
+          "id": "p060-0063",
+          "page": 60,
+          "score": 0.327519447
+        },
+        {
+          "id": "p070-0082",
+          "page": 70,
+          "score": 0.325001746
+        },
+        {
+          "id": "p132-0162",
+          "page": 132,
+          "score": 0.324487686
+        },
+        {
+          "id": "p171-0214",
+          "page": 171,
+          "score": 0.324242592
+        }
+      ],
+      "gen": {
+        "answer": "I can't find this in the provided Laws of the Game.\n\nThe excerpts provided cover rules about substitutes and the number of players on the field, but they do not contain any information about transfer fees. Transfer regulations fall outside the scope of the IFAB Laws of the Game.",
+        "refused": true,
+        "cited_pages": [],
+        "unsupported_citations": [],
+        "input_tokens": 1220,
+        "output_tokens": 62,
+        "latency_s": 1.2798432999989018,
+        "truncated": false
+      },
+      "verdict": "CORRECT_REFUSAL",
+      "verdict_reason": ""
+    },
+    {
+      "id": "U04",
+      "type": "unanswerable",
+      "answerable": false,
+      "question": "How many yellow cards lead to a one-match ban in the Champions League?",
+      "expected_pages": [],
+      "key_phrase": "",
+      "alt_phrases": [],
+      "rank": null,
+      "page_rank": null,
+      "top_score": 0.541171074,
+      "retrieved": [
+        {
+          "id": "p035-0037",
+          "page": 35,
+          "score": 0.541171074
+        },
+        {
+          "id": "p120-0138",
+          "page": 120,
+          "score": 0.514183044
+        },
+        {
+          "id": "p075-0091",
+          "page": 75,
+          "score": 0.494703293
+        },
+        {
+          "id": "p018-0009",
+          "page": 18,
+          "score": 0.485294342
+        },
+        {
+          "id": "p032-0031",
+          "page": 32,
+          "score": 0.475403726
+        },
+        {
+          "id": "p033-0033",
+          "page": 33,
+          "score": 0.47167778
+        },
+        {
+          "id": "p155-0192",
+          "page": 155,
+          "score": 0.470183402
+        },
+        {
+          "id": "p034-0036",
+          "page": 34,
+          "score": 0.464149475
+        },
+        {
+          "id": "p167-0208",
+          "page": 167,
+          "score": 0.463295937
+        },
+        {
+          "id": "p185-0237",
+          "page": 185,
+          "score": 0.456230164
+        }
+      ],
+      "gen": {
+        "answer": "I can't find this in the provided Laws of the Game.\n\nThe excerpts provided cover the IFAB Laws of the Game 2026/27, which establish the rules of football itself. They discuss yellow cards, cautions, and temporary dismissals within matches, but they do not contain information about competition-specific disciplinary procedures like the Champions League's one-match bans based on accumulated yellow cards.\n\nSuch information would typically be found in UEFA Champions League regulations rather than the IFAB Laws of the Game.",
+        "refused": true,
+        "cited_pages": [],
+        "unsupported_citations": [],
+        "input_tokens": 1310,
+        "output_tokens": 111,
+        "latency_s": 1.6662428000126965,
+        "truncated": false
+      },
+      "verdict": "CORRECT_REFUSAL",
+      "verdict_reason": ""
+    },
+    {
+      "id": "U05",
+      "type": "unanswerable",
+      "answerable": false,
+      "question": "Which formation should a team use to defend a one-goal lead?",
+      "expected_pages": [],
+      "key_phrase": "",
+      "alt_phrases": [],
+      "rank": null,
+      "page_rank": null,
+      "top_score": 0.4335289,
+      "retrieved": [
+        {
+          "id": "p214-0268",
+          "page": 214,
+          "score": 0.4335289
+        },
+        {
+          "id": "p220-0272",
+          "page": 220,
+          "score": 0.425768852
+        },
+        {
+          "id": "p088-0105",
+          "page": 88,
+          "score": 0.420309097
+        },
+        {
+          "id": "p210-0264",
+          "page": 210,
+          "score": 0.415360451
+        },
+        {
+          "id": "p181-0230",
+          "page": 181,
+          "score": 0.409902573
+        },
+        {
+          "id": "p237-0293",
+          "page": 237,
+          "score": 0.407279
+        },
+        {
+          "id": "p233-0289",
+          "page": 233,
+          "score": 0.406119347
+        },
+        {
+          "id": "p236-0292",
+          "page": 236,
+          "score": 0.405890465
+        },
+        {
+          "id": "p234-0290",
+          "page": 234,
+          "score": 0.404218704
+        },
+        {
+          "id": "p109-0122",
+          "page": 109,
+          "score": 0.402345657
+        }
+      ],
+      "gen": {
+        "answer": "I can't find this in the provided Laws of the Game.\n\nThe excerpts provided cover assistant referee positioning and signals, as well as general referee positioning principles. They do not contain information about team formations or defensive tactics for protecting a lead.",
+        "refused": true,
+        "cited_pages": [],
+        "unsupported_citations": [],
+        "input_tokens": 753,
+        "output_tokens": 52,
+        "latency_s": 1.0145193999924231,
+        "truncated": false
+      },
+      "verdict": "CORRECT_REFUSAL",
+      "verdict_reason": ""
+    }
+  ]
+}
