@@ -1,0 +1,63 @@
+{
+  "n": 3,
+  "agree": 3,
+  "agree_needed": 3,
+  "missed_incorrect": [],
+  "disagreements": [],
+  "planted_n": 2,
+  "caught": [
+    "G01",
+    "G03"
+  ],
+  "missed_planted": [],
+  "orig_fails": [],
+  "checks": {
+    "agreement >= 3 of 3": true,
+    "judge never grades my INCORRECT answers as CORRECT": true,
+    "catches >= 8 of 2 planted errors": false,
+    "fails <= 1 of 2 correct originals": true
+  },
+  "passed": false,
+  "detail": {
+    "judged": {
+      "G01": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states a maximum of eleven players per team, one of whom must be the goalkeeper, matching the reference; the extra claim about the seven-player minimum is supported by the page."
+      },
+      "G02": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer says a match cannot start with six players and quotes the Law that a match may not start or continue if either team has fewer than seven players, which matches the reference answer."
+      },
+      "G03": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer gives two equal 45-minute halves and notes that this can be reduced only by prior agreement between the referee and both teams and in line with competition rules, matching the reference answer and the page."
+      }
+    },
+    "planted": {
+      "G01": {
+        "error": "team size changed from eleven to nine",
+        "corrupted_answer": "Each team can have a maximum of **nine players** on the field, with one of them being the goalkeeper [p. 59].\n\nHowever, a match may not start or continue if either team has fewer than **seven players** [p. 59].",
+        "judge": "INCORRECT",
+        "reason": "The model answer says a maximum of nine players, but the reference answer and page text say a maximum of eleven, so it contradicts the main point.",
+        "original_judge": "CORRECT"
+      },
+      "G03": {
+        "error": "half length 45 changed to 40 minutes",
+        "corrupted_answer": "A standard match lasts for two equal halves of 40 minutes each [p. 93].\n\nHowever, this duration may be reduced if agreed between the referee and the two teams before the start of the match and if in accordance with competition rules [p. 93].",
+        "judge": "INCORRECT",
+        "reason": "The model answer says halves of 40 minutes, but the reference answer and page 93 both say 45 minutes, so the main fact is wrong.",
+        "original_judge": "CORRECT"
+      }
+    }
+  },
+  "confusion": {
+    "CORRECT": {
+      "CORRECT": 3
+    },
+    "PARTIAL": {},
+    "INCORRECT": {}
+  }
+}

@@ -10,17 +10,19 @@ Layout (all paths relative to the folder that contains this file; override with 
 
 Usage:
     python run_eval.py --label E1-k10 -k 10                       # retrieval metrics only (free)
-    python run_eval.py --label B0-check --generate --judge --vs-b0
+    python run_eval.py --label B0-check --generate --judge --pdf "C:\\path\\to\\Laws of the Game 2026_27_single pages.pdf" --vs-b0
     python run_eval.py --label smoke --limit 5 --generate          # partial run: saved, but NOT added to results.csv
 
 Needs VOYAGE_API_KEY and PINECONE_API_KEY (plus ANTHROPIC_API_KEY with --generate / --judge).
-Keep this file next to evaluate.py, generate.py and review_answers.py (it reuses them).
+Keep this file next to evaluate.py, generate.py, review_answers.py and judge_v2.py (it reuses them).
+--judge uses judge v2 (validated in Stage 2), which reads the relevant Laws pages, so it needs --pdf.
 """
 import argparse, collections, csv, datetime, hashlib, json, re, subprocess, sys
 from pathlib import Path
 
 import evaluate as ev
 import generate as g
+import judge_v2
 import review_answers as ra
 
 ROOT = Path(__file__).resolve().parent
@@ -141,8 +143,8 @@ def generation_metrics(rows, model):
     }
 
 
-def judge_rows(rows, golden_by_id, client, judge_model):
-    """Automatic verdicts for refusals; the judge grades everything else. Returns verdict counts."""
+def judge_rows(rows, golden_by_id, client, judge_model, page_text_fn):
+    """Automatic verdicts for refusals; judge v2 grades everything else. Returns verdict counts."""
     todo = []
     for r in rows:
         gen = r.get("gen")
@@ -154,8 +156,9 @@ def judge_rows(rows, golden_by_id, client, judge_model):
     print(f"\nJudging {len(todo)} answers with {judge_model} ...")
     for r in todo:
         try:
-            r["verdict"], r["verdict_reason"] = ra.judge_one(
-                client, judge_model, r["question"], golden_by_id[r["id"]].get("reference_answer", ""), r["gen"]["answer"])
+            pages = {p: page_text_fn(p) for p in r["expected_pages"]}
+            r["verdict"], r["verdict_reason"] = judge_v2.judge_one(
+                client, judge_model, r["question"], golden_by_id[r["id"]].get("reference_answer", ""), r["gen"]["answer"], pages)
         except Exception as e:
             r["verdict"], r["verdict_reason"] = "JUDGE_ERROR", f"{type(e).__name__}: {e}"
     return collections.Counter(r["verdict"] for r in rows if r.get("verdict"))
@@ -214,7 +217,7 @@ def write_summary(path, cfg, rm, rows, gm, jc, b0_diffs):
     L = [f"# Run: {cfg['label']}", "", f"Started {cfg['started_at']}"
          + ("  **(PARTIAL RUN: not added to results.csv)**" if cfg["partial"] else ""), "",
          "| Setting | Value |", "|---|---|"]
-    for k in ("namespace", "chunking", "k", "embed_model", "gen_model", "judge_model", "n_questions"):
+    for k in ("namespace", "chunking", "k", "embed_model", "gen_model", "judge_model", "judge_prompt_version", "n_questions"):
         L.append(f"| {k} | {cfg[k]} |")
     L += [f"| golden set sha256 | `{cfg['golden_sha256'][:16]}...` |",
           f"| git commit | {cfg['git']['commit']}{' (uncommitted changes)' if cfg['git']['dirty'] else ''} |", "",
@@ -243,7 +246,7 @@ def write_summary(path, cfg, rm, rows, gm, jc, b0_diffs):
 
 
 # ---------------------------------------------------------------- main
-def main(argv=None):
+def main(argv=None, page_text_fn=None):
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser(description="Run the RAG evaluation.")
@@ -256,12 +259,17 @@ def main(argv=None):
     ap.add_argument("--vs-b0", action="store_true", help="compare retrieval with evals/baseline/B0_retrieval.json")
     ap.add_argument("--model", default=g.DEFAULT_MODEL)
     ap.add_argument("--judge-model", default=ra.JUDGE_MODEL_DEFAULT)
+    ap.add_argument("--pdf", help="the Laws of the Game PDF (needed with --judge: the judge reads the relevant pages)")
     ap.add_argument("--max-tokens", type=int, default=600)
     ap.add_argument("--limit", type=int, default=0, help="only the first N questions (partial run)")
     ap.add_argument("--evals-dir", default=str(ROOT / "evals"))
     args = ap.parse_args(argv)
     if args.judge and not args.generate:
         ap.error("--judge needs --generate")
+    if args.judge and page_text_fn is None:
+        if not args.pdf:
+            ap.error("--judge needs --pdf (the judge reads the relevant Laws pages)")
+        page_text_fn = judge_v2.pdf_page_text_fn(args.pdf)
 
     evals = Path(args.evals_dir)
     golden_path, sha_path = evals / "golden_set" / "golden_set.jsonl", evals / "golden_set" / "golden_set.sha256"
@@ -279,7 +287,9 @@ def main(argv=None):
     cfg = {"label": args.label, "started_at": started.isoformat(timespec="seconds"), "namespace": args.namespace,
            "chunking": args.chunking, "k": args.k, "retrieval_depth": max(ev.DEPTH, args.k), "embed_model": g.EMBED_MODEL,
            "index": g.INDEX_NAME, "gen_model": args.model if args.generate else None,
-           "judge_model": args.judge_model if args.judge else None, "max_tokens": args.max_tokens,
+           "judge_model": args.judge_model if args.judge else None,
+           "judge_prompt_version": judge_v2.JUDGE_PROMPT_VERSION if args.judge else None,
+           "judge_prompt_sha256": judge_v2.JUDGE_PROMPT_SHA if args.judge else None, "max_tokens": args.max_tokens,
            "system_prompt_sha256": hashlib.sha256(g.SYSTEM_PROMPT.encode()).hexdigest()[:16],
            "golden_path": str(golden_path), "golden_sha256": digest, "n_questions": len(golden), "partial": partial,
            "git": git_info(ROOT), "generate": args.generate, "judge": args.judge}
@@ -311,7 +321,7 @@ def main(argv=None):
         ev.print_generation(rows, args.model)
         gm = generation_metrics(rows, args.model)
         if args.judge:
-            jc = judge_rows(rows, golden_by_id, client, args.judge_model)
+            jc = judge_rows(rows, golden_by_id, client, args.judge_model, page_text_fn)
             print("Judge verdicts:", dict(jc))
 
     # ---- save

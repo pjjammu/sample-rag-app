@@ -1,0 +1,10 @@
+{"id": "G01", "find": "maximum of **eleven players**", "replace": "maximum of **nine players**", "error": "team size changed from eleven to nine"}
+{"id": "G03", "find": "two equal halves of 45 minutes each", "replace": "two equal halves of 40 minutes each", "error": "half length 45 changed to 40 minutes"}
+{"id": "G04", "find": "is 15 minutes", "replace": "is 20 minutes", "error": "half-time interval 15 changed to 20 minutes"}
+{"id": "G08", "find": "11 m (12 yds)", "replace": "9.15 m (10 yds)", "error": "penalty mark distance changed to 9.15 m"}
+{"id": "G09", "find": "9.15 m (10 yds)", "replace": "5 m (5.5 yds)", "error": "kick-off distance changed to 5 m"}
+{"id": "G12", "find": "a goal kick is awarded", "replace": "a corner kick is awarded", "error": "restart after throw-in into goal changed to corner kick"}
+{"id": "G13", "find": "corner area nearest to", "replace": "corner area furthest from", "error": "corner kick position changed to furthest"}
+{"id": "G14", "find": "**outside the penalty area**", "replace": "**inside the penalty area**", "error": "goal kick opponents' position reversed"}
+{"id": "G31", "find": "a corner kick is awarded to the opponents", "replace": "a goal kick is awarded to the opponents", "error": "own-goal restart changed to goal kick"}
+{"id": "N05", "find": "**eight substitutes**", "replace": "**six substitutes**", "error": "substitute limit changed from eight to six"}

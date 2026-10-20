@@ -18,7 +18,7 @@ A repeatable evaluation process for this RAG app:
 4. **One change per experiment.**
 5. **A stage is finished only when every "done when" line is true.**
 
-**Current stage: 1**
+**Current stage: 3**
 
 ---
 
@@ -48,9 +48,9 @@ The script:
 
 ## Stage 2: A judge I can trust (about 2 hours)
 
-- [ ] 2.1 Change the judge so it is given the text of the question's expected pages and told to use only the reference answer and those pages.
-- [ ] 2.2 Test it against my 41 human grades of the B0 answers. Record the agreement and list every disagreement.
-- [ ] 2.3 Planted-error test: take 10 B0 answers and change one fact in each, then judge both versions. Record how many planted errors it catches and how many correct originals it fails.
+- [x] 2.1 Change the judge so it is given the text of the question's expected pages and told to use only the reference answer and those pages.
+- [x] 2.2 Test it against my 41 human grades of the B0 answers. Record the agreement and list every disagreement.
+- [x] 2.3 Planted-error test: take 10 B0 answers and change one fact in each, then judge both versions. Record how many planted errors it catches and how many correct originals it fails.
 
 **Done when (thresholds are fixed now):**
 
@@ -111,3 +111,4 @@ Each experiment is one change, one run through the harness, one row in `results.
 
 - 2026-10-18: plan created. Golden set frozen at v2.
 - 2026-10-18: Stage 0 complete (baseline recorded in `evals/baseline`). Stage 1 started: `run_eval.py` written.
+- 2026-10-18: Stage 1 complete. Stage 2 complete on attempt 1 of 3, with no judge revisions used (judge prompt v2-grounded, sha 95e6ece39e1353f1): agreement with my grades 40 of 41 (the one disagreement is G33, me CORRECT, judge PARTIAL), 10 of 10 planted errors caught (G31 graded PARTIAL, not INCORRECT), 0 of 10 correct originals failed, no INCORRECT answer graded correct. B0 judge counts under judge v2 for Stage 3: CORRECT 35, PARTIAL 5, INCORRECT 1 (41 answers). `run_eval.py` now uses judge v2 and needs `--pdf`.

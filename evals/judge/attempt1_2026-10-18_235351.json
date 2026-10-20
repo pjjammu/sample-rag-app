@@ -1,0 +1,324 @@
+{
+  "n": 41,
+  "agree": 40,
+  "agree_needed": 37,
+  "missed_incorrect": [],
+  "disagreements": [
+    "G33"
+  ],
+  "planted_n": 10,
+  "caught": [
+    "G01",
+    "G03",
+    "G04",
+    "G08",
+    "G09",
+    "G12",
+    "G13",
+    "G14",
+    "G31",
+    "N05"
+  ],
+  "missed_planted": [],
+  "orig_fails": [],
+  "checks": {
+    "agreement >= 37 of 41": true,
+    "judge never grades my INCORRECT answers as CORRECT": true,
+    "catches >= 8 of 10 planted errors": true,
+    "fails <= 1 of 10 correct originals": true
+  },
+  "passed": true,
+  "detail": {
+    "judged": {
+      "G01": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states the maximum of eleven players with one being the goalkeeper, matching the reference, and the extra claim about the seven-player minimum is supported by the page."
+      },
+      "G02": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer says No and quotes the minimum of seven players per team, which matches the reference answer and page 59."
+      },
+      "G03": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states two equal halves of 45 minutes and notes they can be reduced only if agreed beforehand between the referee and both teams and in line with competition rules, matching the reference."
+      },
+      "G04": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states the maximum half-time interval is 15 minutes, matching the reference answer and the page text."
+      },
+      "G05": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states the 68–70 cm range, which matches the reference answer and the page text."
+      },
+      "G06": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer gives the same 410 g to 450 g range as the reference answer and the page text, and adds the matching ounce conversions."
+      },
+      "G07": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states 7.32 m between the inside of the posts and 2.44 m from the lower edge of the crossbar to the ground, matching the reference; the extra 12 cm limit is supported by the page."
+      },
+      "G08": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states 11 m (12 yds), matching the reference answer and the page text."
+      },
+      "G09": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer gives the same distance, at least 9.15 m (10 yds), and the same condition, until the ball is in play, as the reference answer and the page text."
+      },
+      "G10": {
+        "human": "PARTIAL",
+        "judge": "PARTIAL",
+        "reason": "The model correctly states the maximum is five, but it adds claims about other official competitions allowing a greater number or six substitutes that contradict the pages (which cap official competitions at five) and are unsupported by the provided text."
+      },
+      "G11": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer says a corner kick is awarded to the opponents if the goalkeeper controls the ball for more than eight seconds, which matches the reference, and the five-second visual countdown is supported by page 119."
+      },
+      "G12": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states that a goal kick is awarded, which matches the reference and the page; it omits 'no goal', but this is implied since a goal kick is awarded rather than a goal."
+      },
+      "G13": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer matches the reference answer and the page text: the ball goes in the corner area nearest to where it crossed the goal line, or to the goalkeeper's position when penalised."
+      },
+      "G14": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states that opponents must be outside the penalty area until the ball is in play, matching the reference answer and the page text."
+      },
+      "G15": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states both key conditions (wholly passed over the goal line or touchline, and play stopped by the referee) plus the listed match-official cases, matching the page text."
+      },
+      "G16": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states the core definition matching the reference; the extra claim about goal kicks (p. 145) is not contradicted by the provided page, so it is not an error."
+      },
+      "G17": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model lists all five compulsory items from the reference answer; the added details on the captain's armband match page 67, and the claim about permitted protective equipment from page 68 is neither supported nor contradicted by the provided pages, so it is not an error."
+      },
+      "G18": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer lists away goals rule, two equal periods of extra time not exceeding 15 minutes each, and penalties, and notes that they may be combined, matching the reference and page."
+      },
+      "G19": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states the goalkeeper must remain on the goal line, facing the kicker, between the goalposts until the ball is kicked, and its additional claims match the page text."
+      },
+      "G20": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model lists goal/no goal, penalty/no penalty, direct red card, mistaken identity and the wrongly awarded corner kick, which matches the reference answer; the extra qualifiers do not contradict the reference answer or the page text."
+      },
+      "G21": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states both conditions (in the opponents' half, nearer to the goal line than both the ball and the second-last opponent) and its extra points about level position and hands and arms match the page text."
+      },
+      "G22": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer says arms are not considered and quotes the armpit boundary, matching the reference and page text; its summary that only head, body or feet count agrees with the page."
+      },
+      "G23": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer says no offside offence occurs when receiving the ball directly from a throw-in, which matches the reference answer and the page text."
+      },
+      "G24": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer says it is not an offence to be in an offside position and that a player is only penalised on becoming involved in active play, which matches the reference and the page text."
+      },
+      "G25": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states both key facts from the reference (deliberate touch; touch when the hand/arm has made the body unnaturally bigger), and its added scoring circumstances are supported by the page text."
+      },
+      "G26": {
+        "human": "PARTIAL",
+        "judge": "PARTIAL",
+        "reason": "The model states the two key restrictions (deliberate kick from a team-mate, direct throw-in from a team-mate) but omits the exception for a goalkeeper who has clearly kicked or tried to kick the ball to release it into play, and adds claims about outside the penalty area and disciplinary sanctions that are not in the provided page."
+      },
+      "G27": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer lists playing dangerously, impeding without contact, and dissent/offensive language, matching the reference, and its additional items are all supported by the page text."
+      },
+      "G28": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states the key example from the reference (deceiving the referee by feigning injury or pretending to have been fouled/simulation) and its other listed unsporting-behaviour items match page 122; the extra caution offences from other pages are not contradicted."
+      },
+      "G29": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states the key fact: deliberate handball denying a goal or an obvious goal-scoring opportunity means a send-off, except for a goalkeeper in their own penalty area. Its extra claims about non-deliberate handball outside the penalty area and the caution when a penalty is awarded are supported by the pages."
+      },
+      "G30": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states the card is shown when the ball is next out of play, matching the reference, and its DOGSO exception (no sanction if the non-offending team scores from the advantage) is supported by the page text."
+      },
+      "G31": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states that a goal can be scored directly from a goal kick only against the opposing team, and that a corner kick goes to the opponents if the ball enters the kicker's own goal, matching the reference and page."
+      },
+      "G32": {
+        "human": "INCORRECT",
+        "judge": "INCORRECT",
+        "reason": "The model answer says a goal kick is awarded to the opponents, but the reference answer and page text say a corner kick is awarded to the opponents."
+      },
+      "G33": {
+        "human": "CORRECT",
+        "judge": "PARTIAL",
+        "reason": "The model states the core point (caution for excessively delaying the restart) and lists the examples, but the final note about throw-ins and goal kicks is garbled and not supported by the pages (it also cites a page not provided), and it overstates the list items as separate situations."
+      },
+      "G34": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states that the ball is dropped for the defending team's goalkeeper in their penalty area, matching the reference answer and page 98."
+      },
+      "N01": {
+        "human": "PARTIAL",
+        "judge": "PARTIAL",
+        "reason": "The model correctly states the ten-second limit and when it starts, but omits the consequence in the reference answer: the substitute cannot enter until the first stoppage after one minute has elapsed."
+      },
+      "N02": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states one minute after play restarts (running clock), matching the reference, and its extra detail about re-entry from the touchline or any boundary line is supported by the pages; omitting the exceptions is acceptable given the reference's 'barring certain exceptions'."
+      },
+      "N03": {
+        "human": "PARTIAL",
+        "judge": "PARTIAL",
+        "reason": "The model correctly says the automatic caution was removed, but then claims the kicker is still cautioned when both offend (in regular penalties and shoot-outs), which contradicts the reference answer and the removal it just described."
+      },
+      "N04": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer says no caution is given when advantage is played after a DOGSO offence and the non-offending team scores, which matches the reference answer and the pages."
+      },
+      "N05": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states eight substitutes, or eleven if both teams agree and inform the referee in advance, with the three-substitution-opportunity restriction, matching the reference and page text."
+      },
+      "M01": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer states that a corner kick is awarded for control of the ball for more than eight seconds and that opponents cannot challenge a goalkeeper in control, matching the reference and the page."
+      },
+      "M02": {
+        "human": "CORRECT",
+        "judge": "CORRECT",
+        "reason": "The model answer says the referee need not stop play, advantage may be played, and the match must not resume after the ball goes out of play if a team has fewer than seven players, matching the reference and page."
+      }
+    },
+    "planted": {
+      "G01": {
+        "error": "team size changed from eleven to nine",
+        "corrupted_answer": "Each team can have a maximum of **nine players** on the field, with one of them being the goalkeeper [p. 59].\n\nHowever, a match may not start or continue if either team has fewer than **seven players** [p. 59].",
+        "judge": "INCORRECT",
+        "reason": "The model answer says a maximum of nine players, but the reference answer and page text say a maximum of eleven, so the main point is wrong.",
+        "original_judge": "CORRECT"
+      },
+      "G03": {
+        "error": "half length 45 changed to 40 minutes",
+        "corrupted_answer": "A standard match lasts for two equal halves of 40 minutes each [p. 93].\n\nHowever, this duration may be reduced if agreed between the referee and the two teams before the start of the match and if in accordance with competition rules [p. 93].",
+        "judge": "INCORRECT",
+        "reason": "The model answer says two halves of 40 minutes, but the reference and the page both say 45 minutes, so the main fact is wrong.",
+        "original_judge": "CORRECT"
+      },
+      "G04": {
+        "error": "half-time interval 15 changed to 20 minutes",
+        "corrupted_answer": "The maximum length of the half-time interval is 20 minutes [p. 93].",
+        "judge": "INCORRECT",
+        "reason": "The model answer says 20 minutes, but the reference answer and the Laws page both give a maximum of 15 minutes.",
+        "original_judge": "CORRECT"
+      },
+      "G08": {
+        "error": "penalty mark distance changed to 9.15 m",
+        "corrupted_answer": "The penalty mark is 9.15 m (10 yds) from the midpoint between the goalposts. [p. 48]",
+        "judge": "INCORRECT",
+        "reason": "The model says 9.15 m (10 yds), which is the radius of the penalty arc, but the reference and page give 11 m (12 yds) for the penalty mark.",
+        "original_judge": "CORRECT"
+      },
+      "G09": {
+        "error": "kick-off distance changed to 5 m",
+        "corrupted_answer": "At a kick-off, opponents of the team taking the kick-off must be at least 5 m (5.5 yds) from the ball until it is in play. [p. 97]",
+        "judge": "INCORRECT",
+        "reason": "The model answer gives 5 m (5.5 yds), which contradicts the reference and page text stating at least 9.15 m (10 yds).",
+        "original_judge": "CORRECT"
+      },
+      "G12": {
+        "error": "restart after throw-in into goal changed to corner kick",
+        "corrupted_answer": "If a throw-in goes directly into the opponents' goal, a corner kick is awarded [p. 141].",
+        "judge": "INCORRECT",
+        "reason": "The model says a corner kick is awarded, but the reference and page say a goal kick is awarded when the ball enters the opponents' goal.",
+        "original_judge": "CORRECT"
+      },
+      "G13": {
+        "error": "corner kick position changed to furthest",
+        "corrupted_answer": "The ball must be placed in the corner area furthest from the point where the ball passed over the goal line or the goalkeeper's position when penalised [p. 149].",
+        "judge": "INCORRECT",
+        "reason": "The model says the corner area 'furthest from' the point, but the reference and Law text say 'nearest', so it contradicts the main point.",
+        "original_judge": "CORRECT"
+      },
+      "G14": {
+        "error": "goal kick opponents' position reversed",
+        "corrupted_answer": "Opponents must be **inside the penalty area** until the ball is in play at a goal kick. [p. 145]",
+        "judge": "INCORRECT",
+        "reason": "The model says opponents must be inside the penalty area, but the reference answer and page 145 say they must be outside it until the ball is in play.",
+        "original_judge": "CORRECT"
+      },
+      "G31": {
+        "error": "own-goal restart changed to goal kick",
+        "corrupted_answer": "Yes, a goal may be scored directly from a goal kick, but only against the opposing team. If the ball directly enters the kicker's goal, a goal kick is awarded to the opponents instead [p. 145].",
+        "judge": "PARTIAL",
+        "reason": "The model correctly says a goal can be scored only against the opposing team, but it wrongly says a goal kick is awarded to the opponents when the ball enters the kicker's own goal, whereas the pages and reference say a corner kick is awarded.",
+        "original_judge": "CORRECT"
+      },
+      "N05": {
+        "error": "substitute limit changed from eight to six",
+        "corrupted_answer": "In senior 'A' international team friendly matches, a maximum of **six substitutes** may be used [p. 60]. \n\nHowever, if both teams agree in advance and inform the referee before the match, they may use up to a maximum of **eleven substitutes** [p. 60]. In this case, each team will be restricted to three substitution opportunities [p. 167].",
+        "judge": "INCORRECT",
+        "reason": "The model states the default maximum is six substitutes, but the reference and page say it is eight (or eleven by agreement), so the main default figure is wrong.",
+        "original_judge": "CORRECT"
+      }
+    }
+  },
+  "confusion": {
+    "CORRECT": {
+      "CORRECT": 35,
+      "PARTIAL": 1
+    },
+    "PARTIAL": {
+      "PARTIAL": 4
+    },
+    "INCORRECT": {
+      "INCORRECT": 1
+    }
+  }
+}
